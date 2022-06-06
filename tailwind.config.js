@@ -33,9 +33,9 @@ module.exports = {
       },
       colors:{
         // Background Colors
-        light: '#F7F9FF',
-        dark: '#181925',
-        container: '#242424',
+        metacrateRed: "#D83E40",
+        metacrateWhite: "#F5F5F5",
+        metacrateBlack: "#353535",
         // Primary Colors
         primary: '#40C38C',
         secondary: '#EF8CA4',
@@ -46,19 +46,7 @@ module.exports = {
         subheader: '#3142EA',
         body: '#2F4181',
         // General Duppy Colors
-        duppyWhite: '#FFF',
-        duppyOffWhite: '#7772',
-        duppyBlack: '#0F0F0F',
-        duppyOrange: '#FF8A00',
-        duppyYellow: '#FFF200',
-        duppyBlue: '#3142EA',
-        duppyGrey1: '#E8EDF8',
-        duppyGrey2: '#E1E8F6',
-        duppyLightBlue: '#D5D8FF',
-        duppyPurple: '#8691FF',
-        duppyDarkPurple: '#2F4181',
-        duppyGreen: "#3CC88D",
-        duppyRed: "#EF8CA4",
+
       },
       fontSize: {
         //title

@@ -4,13 +4,11 @@ import Navbar from "../components/shared/Navbar";
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-between h-screen bg-cover bg-left sm:mb-16" style={{
-      backgroundImage: "url('/images/introBG.png')"
-    }}>
+    <div className="flex flex-col justify-between h-screen bg-cover bg-left sm:mb-16">
       {/* outer container for "intro" section */}
       <div>
         <Navbar>
-          <Typography variant="body" color="duppyDarkPurple" fontSize={['md', 'lg']}>
+          <Typography variant="body" color="metacrateWhite" fontSize={['md', 'lg']}>
             Art coming soon...
           </Typography>
         </Navbar>
