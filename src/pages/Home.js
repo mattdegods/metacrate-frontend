@@ -1,33 +1,22 @@
 import Image from "next/image";
-import Typography from "../components/shared/Typography";
 import Navbar from "../components/shared/Navbar";
+
+import video_img from "../components/shared/assets/vid_screenshot.png";
 
 const Home = () => {
   return (
-    <div className="flex flex-col justify-between h-screen bg-cover bg-left sm:mb-16">
+    <div>
       {/* outer container for "intro" section */}
       <div>
-        <Navbar>
-          <Typography variant="body" color="metacrateWhite" fontSize={['md', 'lg']}>
-            Art coming soon...
-          </Typography>
-        </Navbar>
+        <Navbar />
       </div>
-      <div className="sm:mb-5 mb-[400px] lg:px-16 sm:flex items-center px-4 md:px-16">
-        <div className="w-full text-center mb-3 h-[280px] sm:h-auto flex flex-col  ">
-          <div className="sm:text-left pt-[5%] sm:pt-0">
-            <Typography color="header" variant="subheader" fontFamily="base-b">
-              June 2022
-            </Typography>
+      <div>
+        <div className="py-8 mt-8 w-full text-center">
+          <div className="text-[32px] uppercase">Welcome to <span className="text-metacrateRed">Meta Crate.</span></div>
+          <div className="my-8 px-10">
+            <Image src={video_img} alt="screenshot" />
           </div>
-          <div className="sm:text-left">
-            <Typography variant="title">Duppies</Typography>
-          </div>
-        </div>
-        <div className="text-center sm:text-left h-[260px] sm:h-auto flex justify-end items-end px-10 sm:px-4 pb-4">
-          <Typography variant="header" color='body' fontSize={['xl','2xl']} >
-            A new NFT project from the team that brought you DeGods
-          </Typography>
+          <div className="text-[16px] uppercase px-8">COLLECT, CONSUME, AND TRADE EXCLUSIVE NFT RECORDS FROM YOUR FAVORITE ARTISTS</div>
         </div>
       </div>
     </div>
