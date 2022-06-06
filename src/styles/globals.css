@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: duppies;
+    src: url('../../public/fonts/GT-Pressura-Regular-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: bingodilan;
+  src: url('../../public/fonts/BingoDilan.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-bi;
+  src: url('../../public/fonts/GT-Pressura-Bold-Italic-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-b;
+  src: url('../../public/fonts/GT-Pressura-Bold-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-li;
+  src: url('../../public/fonts/GT-Pressura-Light-Italic-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-l;
+  src: url('../../public/fonts/GT-Pressura-Light-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-mbi;
+  src: url('../../public/fonts/GT-Pressura-Mono-Bold-Italic-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-mb;
+  src: url('../../public/fonts/GT-Pressura-Mono-Bold-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-mli;
+  src: url('../../public/fonts/GT-Pressura-Mono-Light-Italic-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-ml;
+  src: url('../../public/fonts/GT-Pressura-Mono-Light-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-mri;
+  src: url('../../public/fonts/GT-Pressura-Mono-Regular-Italic-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-mr;
+  src: url('../../public/fonts/GT-Pressura-Mono-Regular-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-ri;
+  src: url('../../public/fonts/GT-Pressura-Regular-Italic-Trial.otf') format('opentype');
+}
+@font-face {
+  font-family: pressura-r;
+  src: url('../../public/fonts/GT-Pressura-Regular-Trial.otf') format('opentype');
+}
+
+/* Sets top level div background */
+@layer base {
+  body {
+    @apply bg-light;
+  }
+}
+
+* {
+  font-family: 'duppies', monospace;
+  padding: 0;
+  margin: 0;
+}
+
+li { 
+  list-style-image: url(../components/assets/images/bullet_threefourths.png); 
+} 
