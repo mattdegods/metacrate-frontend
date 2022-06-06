@@ -8,7 +8,6 @@ import MenuOpen from "./assets/MenuOpen";
 import logo from "./assets/Logo.png";
 
 const NavBar = () => {
-
   // menu state
   const [open, setOpen] = useState(false);
 
@@ -27,9 +26,14 @@ const NavBar = () => {
         </div>
         <div className="pt-2">
           <Link href="/">
-          <a>
-            <Image src={logo} width="48px" height="48px" alt="metacrate logo" />
-          </a>
+            <a>
+              <Image
+                src={logo}
+                width="48px"
+                height="48px"
+                alt="metacrate logo"
+              />
+            </a>
           </Link>
         </div>
         {/* menu div */}
@@ -47,7 +51,9 @@ const NavBar = () => {
         </div> */}
 
         {/* connect wallet button */}
-        <div className="bg-[#B82628] text-metacrateWhite rounded-lg px-4 py-2 ml-auto mr-4">CONNECT</div>
+        <div className="bg-[#B82628] text-metacrateWhite rounded-lg px-4 py-2 ml-auto mr-4">
+          CONNECT
+        </div>
       </div>
 
       {/* mobile menu */}
@@ -57,14 +63,13 @@ const NavBar = () => {
             transition-all ${open ? "opacity-100" : "opacity-0"} w-full
             overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 
             z-50 h-screen lg:inset-0 h-modal ml-0`}
-          onClick={() => setOpen(false)}
         >
           <div
             className={`absolute flex flex-col space-y-[38px] h-full w-full 
             top-0 left-0 px-5 md:px-10`}
           >
             <div
-              className="w-full h-[132px] items-center 
+              className="w-full h-[80px] px-3 items-center 
               flex flex-row justify-between"
             >
               {/* <div className="flex mr-auto cursor-pointer">
@@ -77,19 +82,33 @@ const NavBar = () => {
                   /></a>
                 </Link>
               </div> */}
-              <div className="flex ml-auto cursor-pointer">
+              <div
+                className="flex ml-auto cursor-pointer"
+                onClick={() => setOpen(false)}
+              >
                 {MenuOpen}
               </div>
             </div>
-            <div>
-              <a href="https://discord.gg/dedao" target="_blank" rel="noreferrer">
-                Contact
-              </a>
-            </div>
-            <div>
-              <Link href="/faq">
-                <a>FAQ</a>
-              </Link>
+            <div className="text-center text-metacrateWhite uppercase text-[40px] pt-20">
+              <div className="my-6">
+                <Link href="/about">
+                  <a>about us</a>
+                </Link>
+              </div>
+              <div className="my-6">
+                <Link href="/mint">
+                  <a>mint</a>
+                </Link>
+              </div>
+              <div className="my-6">
+                <Link href="/records">
+                  <a>my records</a>
+                </Link>
+              </div>
+              <div className="text-metacrateWhite/40 my-6">
+                record store
+                <span className="lowercase text-body-md">(coming soon)</span>
+              </div>
             </div>
           </div>
           <div className="mx-auto mt-auto">
@@ -97,7 +116,7 @@ const NavBar = () => {
               href="https://www.metacrate.com/"
               target="_blank"
               rel="noreferrer"
-              className="text-md text-degodBlack/30"
+              className="text-md text-metacrateWhite"
             >
               metacrate.com
             </a>
