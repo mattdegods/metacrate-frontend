@@ -4,14 +4,14 @@ import Footer from "../components/Footer";
 
 const Landing = () => (
   <div>
-    <div className="bg-light h-screen flex flex-col justify-between">
+    <div className="bg-light max-h-screen flex flex-col">
       <div>
         <NavBar />
       </div>
-      <div>
+      <div className="h-full">
         <Home />
       </div>
-      <div>
+      <div className="fixed bottom-0">
         <Footer />
       </div>
     </div>

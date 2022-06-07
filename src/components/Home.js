@@ -2,11 +2,12 @@ import Image from "next/image";
 import Navbar from "./shared/Navbar";
 
 import video_img from "../components/shared/assets/vid_screenshot.png";
+import crates from "../components/shared/assets/cratesbg.png";
 
 const Home = () => {
   return (
     <div>
-      <div className="py-8 mt-8 w-full text-center">
+      <div className="pt-12 w-full text-center overflow-y-clip">
         <div className="text-[32px] uppercase">
           Welcome to <span className="text-metacrateRed">Meta Crate.</span>
         </div>
@@ -16,6 +17,9 @@ const Home = () => {
         <div className="text-[16px] uppercase px-8">
           COLLECT, CONSUME, AND TRADE EXCLUSIVE NFT RECORDS FROM YOUR FAVORITE
           ARTISTS
+        </div>
+        <div className="w-full pt-10">
+          <Image src={crates} alt="crate background" />
         </div>
       </div>
     </div>
