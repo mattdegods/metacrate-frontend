@@ -2,6 +2,7 @@ import Image from "next/image";
 import NavBar from "../components/shared/Navbar";
 import cratesplit from "../components/shared/assets/cratesplit.png";
 import Arrow from "../components/shared/assets/Arrow";
+import RedPolygon from "../components/shared/assets/RedPolygon";
 
 const About = () => (
   <div>
@@ -34,18 +35,24 @@ const About = () => (
     </div>
     {/* the roadmap */}
     <div className="px-[80px] mb-10">
-      <div className="text-[32px] text-center uppercase">The Roadmap</div>
+      <div className="text-[32px] text-center uppercase pb-6">The Roadmap</div>
       {/* phase 1 graphic here */}
-      <ul className="py-6">
+      <div className="flex items-center justify-center space-x-3">
+        <div className="h-full">
+          {RedPolygon}
+        </div>
+        <div className="h-full text-metacrateRed text-[24pz]">phase 1</div>
+      </div>
+      <ul className="pt-6 pb-12">
         <li>
-          <div className="px-3 -translate-y-2">
+          <div className="pl-3 -translate-y-2">
             Announce
             <br />
             <span className="text-[#6B6B6B]">Discord and Twitter opening</span>
           </div>
         </li>
         <li>
-          <div className="px-3 -translate-y-2">
+          <div className="pl-3 -translate-y-2">
             Community Growth
             <br />
             <span className="text-[#6B6B6B]">
@@ -54,7 +61,7 @@ const About = () => (
           </div>
         </li>
         <li>
-          <div className="px-3 -translate-y-2">
+          <div className="pl-3 -translate-y-2">
             1st Artist Announce
             <br />
             <span className="text-[#6B6B6B]">
@@ -63,7 +70,7 @@ const About = () => (
           </div>
         </li>
         <li>
-          <div className="px-3 -translate-y-2">
+          <div className="pl-3 -translate-y-2">
             Generation 1 Crate Mint
             <br />
             <span className="text-[#6B6B6B]">
@@ -72,7 +79,90 @@ const About = () => (
             </span>
           </div>
         </li>
+        <li>
+          <div className="pl-3 -translate-y-2">
+            1st Record Release
+            <br />
+            <span className="text-[#6B6B6B]">
+              First project released for open mint to all crate owners / Each
+              mint will distribute a random single from the project
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="pl-3 -translate-y-2">
+            1st Free Project NFT
+            <br />
+            <span className="text-[#6B6B6B]">
+              Project NFTs gifted to everyone who collects each single
+            </span>
+          </div>
+        </li>
       </ul>
+
+      <div className="flex items-center justify-center space-x-3">
+        <div className="h-full">
+          {RedPolygon}
+        </div>
+        <div className="h-full text-metacrateRed text-[24pz]">phase 2</div>
+      </div>
+      <ul className="pt-6 pb-12">
+        <li>
+          <div className="pl-3 -translate-y-2">
+            Announce
+            <br />
+            <span className="text-[#6B6B6B]">Discord and Twitter opening</span>
+          </div>
+        </li>
+        <li>
+          <div className="pl-3 -translate-y-2">
+            Community Growth
+            <br />
+            <span className="text-[#6B6B6B]">
+              Tease Artwork, Announce Partnerships & Giveaways
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="pl-3 -translate-y-2">
+            1st Artist Announce
+            <br />
+            <span className="text-[#6B6B6B]">
+              We will announce our first artist and tease music
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="pl-3 -translate-y-2">
+            Generation 1 Crate Mint
+            <br />
+            <span className="text-[#6B6B6B]">
+              1,000 Gen 1 crates will be minted at 0.808 SOL / First 1,000 crate
+              owners will be given the '808 Superfan' role
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="pl-3 -translate-y-2">
+            1st Record Release
+            <br />
+            <span className="text-[#6B6B6B]">
+              First project released for open mint to all crate owners / Each
+              mint will distribute a random single from the project
+            </span>
+          </div>
+        </li>
+        <li>
+          <div className="pl-3 -translate-y-2">
+            1st Free Project NFT
+            <br />
+            <span className="text-[#6B6B6B]">
+              Project NFTs gifted to everyone who collects each single
+            </span>
+          </div>
+        </li>
+      </ul>
+
     </div>
   </div>
 );
