@@ -105,21 +105,16 @@ const NavBar = () => {
                   <a>my records</a>
                 </Link>
               </div>
-              <div className="text-metacrateWhite/40 my-6">
-                record store
-                <span className="lowercase text-body-md">(coming soon)</span>
+              <div className="text-metacrateWhite/40 mt-6">record store</div>
+              <div className="lowercase text-metacrateWhite/40 text-body-md">
+                (coming soon)
               </div>
             </div>
           </div>
-          <div className="mx-auto mt-auto">
-            <a
-              href="https://www.metacrate.com/"
-              target="_blank"
-              rel="noreferrer"
-              className="text-md text-metacrateWhite"
-            >
-              metacrate.com
-            </a>
+          <div className="mx-auto mt-auto text-metacrateWhite">
+            <Link href="/">
+              <a>metacrate.com</a>
+            </Link>
           </div>
         </div>
       )}

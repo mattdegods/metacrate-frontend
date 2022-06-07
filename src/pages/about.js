@@ -5,7 +5,7 @@ import Arrow from "../components/shared/assets/Arrow";
 import RedPolygon from "../components/shared/assets/RedPolygon";
 
 const About = () => (
-  <div>
+  <div className="relative">
     <div>
       <NavBar />
     </div>
@@ -38,9 +38,7 @@ const About = () => (
       <div className="text-[32px] text-center uppercase pb-6">The Roadmap</div>
       {/* phase 1 graphic here */}
       <div className="flex items-center justify-center space-x-3">
-        <div className="h-full">
-          {RedPolygon}
-        </div>
+        <div className="h-full">{RedPolygon}</div>
         <div className="h-full text-metacrateRed text-[24pz]">phase 1</div>
       </div>
       <ul className="pt-6 pb-12">
@@ -101,68 +99,66 @@ const About = () => (
       </ul>
 
       <div className="flex items-center justify-center space-x-3">
-        <div className="h-full">
-          {RedPolygon}
-        </div>
+        <div className="h-full">{RedPolygon}</div>
         <div className="h-full text-metacrateRed text-[24pz]">phase 2</div>
       </div>
       <ul className="pt-6 pb-12">
         <li>
           <div className="pl-3 -translate-y-2">
-            Announce
-            <br />
-            <span className="text-[#6B6B6B]">Discord and Twitter opening</span>
-          </div>
-        </li>
-        <li>
-          <div className="pl-3 -translate-y-2">
-            Community Growth
+            More Record Releases
             <br />
             <span className="text-[#6B6B6B]">
-              Tease Artwork, Announce Partnerships & Giveaways
+              Continue partnering and releasing more music to community
             </span>
           </div>
         </li>
         <li>
           <div className="pl-3 -translate-y-2">
-            1st Artist Announce
+            Crate Web Experience Launch
             <br />
             <span className="text-[#6B6B6B]">
-              We will announce our first artist and tease music
+              Engage with your NFT vinyls in a never before seen way
             </span>
           </div>
         </li>
         <li>
           <div className="pl-3 -translate-y-2">
-            Generation 1 Crate Mint
+            Charity Donation
             <br />
             <span className="text-[#6B6B6B]">
-              1,000 Gen 1 crates will be minted at 0.808 SOL / First 1,000 crate
-              owners will be given the '808 Superfan' role
+              Community vote on where to donate community wallet
             </span>
           </div>
         </li>
         <li>
           <div className="pl-3 -translate-y-2">
-            1st Record Release
+            Events
             <br />
             <span className="text-[#6B6B6B]">
-              First project released for open mint to all crate owners / Each
-              mint will distribute a random single from the project
+              In person LA event that is streamed virtually for our entire
+              community
             </span>
           </div>
         </li>
         <li>
           <div className="pl-3 -translate-y-2">
-            1st Free Project NFT
+            Metaverse Record Store
             <br />
             <span className="text-[#6B6B6B]">
-              Project NFTs gifted to everyone who collects each single
+              Purchase and development of the first record store in the
+              Metaverse.
             </span>
           </div>
         </li>
       </ul>
-
+    </div>
+    {/* footer / the team */}
+    <div className="w-full h-[230px] px-10 bg-metacrateRed">
+      <div className="h-full flex flex-col justify-between py-12">
+        <div className="font-ubuntu text-metacrateWhite text-center text-lg">
+          THE TEAM
+        </div>
+      </div>
     </div>
   </div>
 );
