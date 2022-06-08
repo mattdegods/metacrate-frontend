@@ -4,6 +4,12 @@ import cratesplit from "../components/shared/assets/cratesplit.png";
 import Arrow from "../components/shared/assets/Arrow";
 import RedPolygon from "../components/shared/assets/RedPolygon";
 
+import thirdbrain from "../components/shared/assets/THIRDBRAIN.png";
+import web3devs from "../components/shared/assets/WEB3DEVS.png";
+import uc from "../components/shared/assets/uc.png";
+// need these icons in SVG if possible, like this:
+//import ThirdBrain from "../components/shared/assets/thirdbrain";
+
 const About = () => (
   <div className="relative">
     <div>
@@ -154,9 +160,15 @@ const About = () => (
     </div>
     {/* footer / the team */}
     <div className="w-full h-[230px] px-10 bg-metacrateRed">
-      <div className="h-full flex flex-col justify-between py-12">
-        <div className="font-ubuntu text-metacrateWhite text-center text-lg">
+      <div className="h-full flex flex-col justify-between py-8">
+        <div className="font-ubuntu text-metacrateWhite text-center text-[32px]">
           THE TEAM
+        </div>
+        {/* three logos */}
+        <div className="flex justify-between px-3">
+          <Image src={web3devs} alt="web3 devs logo" />
+          <Image src={thirdbrain} alt="thirdbrain logo" />
+          <Image src={uc} alt="uc logo" />
         </div>
       </div>
     </div>
