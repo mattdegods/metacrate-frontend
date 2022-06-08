@@ -14,7 +14,7 @@ const Footer = () => {
       </div>
       {/* desktop crates */}
       {/* cant get crates to show properly... */}
-      <div className="border border-red-500 absolute -translate-y-32 sm:z-10">
+      <div className="absolute -translate-y-32 sm:z-10">
         <Image src={crates_desktop} alt="crate background desktop" />
       </div>
       <div className="h-[220px] sm:h-[111px] px-10 bg-metacrateRed z-20">
