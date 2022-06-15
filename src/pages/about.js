@@ -16,7 +16,7 @@ const About = () => (
       <NavBar />
     </div>
     <div className="py-8 mt-8 w-full text-center">
-      <div className="text-[32px] uppercase">Welcome to Meta Crate.</div>
+      <div className="text-[32px] uppercase">Welcome to MetaCrate.</div>
       <div className="my-8 px-10">
         <Image src={cratesplit} alt="crate description" />
       </div>
@@ -158,6 +158,9 @@ const About = () => (
         </li>
       </ul>
     </div>
+
+    {/* TO DO: ARTIST APPLICATION */}
+
     {/* footer / the team */}
     <div className="w-full h-[230px] px-10 bg-metacrateRed">
       <div className="h-full flex flex-col justify-between py-8">

@@ -8,7 +8,7 @@ const Home = () => {
     <div>
       <div className="pt-12 w-full text-center">
         <div className="text-[32px] uppercase">
-          Welcome to <span className="text-metacrateRed">Meta Crate.</span>
+          Welcome to <span className="text-metacrateRed">MetaCrate.</span>
         </div>
         <div className="my-8 px-10">
           <Image src={video_img} alt="screenshot" />

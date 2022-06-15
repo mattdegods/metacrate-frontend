@@ -92,7 +92,7 @@ const NavBar = () => {
             <div className="text-center text-metacrateWhite uppercase text-[40px] pt-20">
               <div className="my-6">
                 <Link href="/about">
-                  <a>about us</a>
+                  <a>about</a>
                 </Link>
               </div>
               <div className="my-6">
