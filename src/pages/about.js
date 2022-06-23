@@ -16,7 +16,9 @@ const About = () => (
     <div>
       <NavBar />
     </div>
-    <div className="py-8 mt-8 w-full text-center">
+
+    {/* mobile header */}
+    <div className="py-8 mt-8 w-full text-center lg:hidden">
       <div className="text-[32px] uppercase">Welcome to MetaCrate.</div>
       <div className="my-8 px-10">
         <Image src={cratesplit} alt="crate description" />
@@ -40,7 +42,41 @@ const About = () => (
       </div>
       <div className="w-full flex justify-center mt-6">{Arrow}</div>
     </div>
-    {/* the roadmap */}
+
+    {/* web header */}
+    <div className="py-8 mt-8 w-full text-center hidden lg:block">
+      <div className="text-[46px] uppercase">Welcome to <span className="text-metacrateRed">MetaCrate</span>.</div>
+      <div className="flex flex-row items-center px-10">
+        <div className="my-8 px-10 max-w-3xl">
+          <Image src={cratesplit} alt="crate description" />
+        </div>
+        <div className="max-w-3xl h-fit w-1/2 py-6 px-4 mr-8 text-left text-[16px] rounded-lg bg-metacrateRed text-metacrateWhite">
+          Every Artist can have a second life; we're here to break Artists from
+          the confines of their existing brand and label by offering them a new
+          identity in the Metaverse.
+          <br />
+          <br />
+          Meta Crate is the first music NFT platform for recording artists to
+          release music in the Metaverse. Records will be regularly released to
+          the community of crate owners with gamified ownership, listening
+          parties, competitions, unique airdrops, artist activations and more.
+          Only crate owners will be able to mint records while everyone else must
+          purchase on the secondary markets.
+          <br />
+          <br />
+          Solana is an alternative blockchain and cryptocurrency solution to the
+          negative economic impact Ethereum has had on the environment.
+        </div>
+      </div>
+      <div className="w-full flex justify-center mt-6 bg-[url('/images/cratesbg_desk.png')] bg-cover h-[227px]">
+        <div className="w-full text-center my-auto">
+          <p className="uppercase text-metacrateWhite text-[36px] pb-6">Read Our Roadmap</p>
+          <Image src="/images/Arrow_web.svg" width="215px" height="67px" alt="arrow" />
+        </div>
+      </div>
+    </div>
+
+    {/* mobile roadmap */}
     <div className="px-14 sm:px-4 sm:w-1/2 mb-10 mx-auto">
       <div className="text-[32px] text-center uppercase pb-6">The Roadmap</div>
       {/* phase 1 graphic here */}
