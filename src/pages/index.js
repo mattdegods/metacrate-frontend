@@ -4,7 +4,7 @@ import Footer from "../components/Footer";
 
 const Landing = () => (
   <div>
-    <div className="bg-light max-h-screen flex flex-col">
+    <div className="bg-light min-h-screen  flex flex-col">
       <div>
         <NavBar />
       </div>

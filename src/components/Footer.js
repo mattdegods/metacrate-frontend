@@ -2,13 +2,11 @@ import Image from "next/image";
 import twitter from "./shared/assets/twitter.png";
 import discord from "./shared/assets/discord.png";
 import medium from "./shared/assets/medium.png";
-import crates_mobile from "./shared/assets/crates_mobile.png";
-import crates_desktop from "./shared/assets/crates_desktop.png";
 
 const Footer = () => {
   return (
     <div className="w-full relative">
-      <div className="h-[180px] sm:h-[111px] sm:px-10 bg-metacrateRed z-50">
+      <div className="h-[180px] sm:h-[120px] sm:px-10 bg-metacrateRed z-50">
         <div className="h-full flex flex-col sm:flex-row sm:py-12 justify-center items-center">
           <div className="hidden sm:block">
             <Image src={discord} height="80px" width="80px" alt="discord" />
