@@ -179,19 +179,20 @@ const About = () => (
 
     {/* WEB footer / the team */}
     <div className="w-full h-[230px] px-10 bg-metacrateBlack hidden lg:block">
-      <div className="h-full flex flex-col justify-between py-8">
-        <div className="font-ubuntu text-metacrateWhite text-center text-[32px]">
+      <div className="h-full py-8">
+        <div className="font-ubuntu text-metacrateWhite text-center text-[32px] pb-3">
           THE TEAM
         </div>
         {/* three logos */}
-        <div className="flex justify-between px-3 sm:px-20">
+        <div className="flex justify-evenly w-1/2 mx-auto">
           <Image src={web3devs} alt="web3 devs logo" />
           <Image src={thirdbrain} alt="thirdbrain logo" />
           <Image src={uc} alt="uc logo" />
         </div>
       </div>
     </div>
-    <Footer />
+    <div className="hidden lg:block"><Footer /></div>
+    
   </div>
 );
 
