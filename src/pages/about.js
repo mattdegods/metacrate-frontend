@@ -77,7 +77,7 @@ const About = () => (
     </div>
 
     {/* mobile roadmap */}
-    <div className="px-14 sm:px-4 sm:w-1/2 mb-10 mx-auto">
+    <div className="px-16 sm:px-4 sm:w-1/2 mb-10 mx-auto">
       <div className="text-[32px] text-center uppercase pb-6">The Roadmap</div>
       {/* phase 1 graphic here */}
       <div className="flex items-center justify-center space-x-3">
@@ -85,6 +85,9 @@ const About = () => (
         <div className="h-full text-metacrateRed text-[24px]">phase 1</div>
       </div>
       <ul className="pt-6 pb-12">
+        {/* dashed line */}
+        <div className="absolute h-[490px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[50px] translate-y-6 sm:hidden" />
+
         <li>
           <div className="pl-3 -translate-y-2">
             Announce
@@ -143,9 +146,11 @@ const About = () => (
 
       <div className="flex items-center justify-center space-x-3">
         <div className="h-full">{RedPolygon}</div>
-        <div className="h-full text-metacrateRed text-[24pz]">phase 2</div>
+        <div className="h-full text-metacrateRed text-[24px]">phase 2</div>
       </div>
       <ul className="pt-6 pb-12">
+        {/* dashed line */}
+        <div className="absolute h-[360px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[50px] translate-y-6 sm:hidden" />
         <li>
           <div className="pl-3 -translate-y-2">
             More Record Releases

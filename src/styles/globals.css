@@ -23,4 +23,6 @@
 
 li { 
   list-style-image: url(../components/shared/assets/bullet_poly.png); 
+  padding-top: 8px;
+  padding-bottom: 8px;
 } 
