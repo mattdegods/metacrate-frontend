@@ -7,18 +7,9 @@ import crates_desktop from "./shared/assets/crates_desktop.png";
 
 const Footer = () => {
   return (
-    <div className="w-full relative pt-6">
-      {/* mobile crates */}
-      <div className="sm:hidden pt-[10px] absolute -translate-y-32 -z-10">
-        <Image src={crates_mobile} alt="crate background mobile" />
-      </div>
-      {/* desktop crates */}
-      {/* cant get crates to show properly... */}
-      <div className="absolute -translate-y-32 sm:z-10">
-        <Image src={crates_desktop} alt="crate background desktop" />
-      </div>
-      <div className="h-[220px] sm:h-[111px] px-10 bg-metacrateRed z-20">
-        <div className="h-full flex flex-col sm:flex-row py-12 justify-center items-center">
+    <div className="w-full relative">
+      <div className="h-[180px] sm:h-[111px] sm:px-10 bg-metacrateRed z-50">
+        <div className="h-full flex flex-col sm:flex-row sm:py-12 justify-center items-center">
           <div className="hidden sm:block">
             <Image src={discord} height="80px" width="80px" alt="discord" />
           </div>
