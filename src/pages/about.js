@@ -7,6 +7,7 @@ import RedPolygon from "../components/shared/assets/RedPolygon";
 import thirdbrain from "../components/shared/assets/THIRDBRAIN.png";
 import web3devs from "../components/shared/assets/WEB3DEVS.png";
 import uc from "../components/shared/assets/uc.png";
+import Footer from "../components/Footer";
 // need these icons in SVG if possible, like this:
 //import ThirdBrain from "../components/shared/assets/thirdbrain";
 
@@ -20,7 +21,7 @@ const About = () => (
       <div className="my-8 px-10">
         <Image src={cratesplit} alt="crate description" />
       </div>
-      <div className="pb-3 text-left text-[14px] px-10">
+      <div className="pb-3 text-left text-[14px] sm:text-[20px] px-10 sm:px-20">
         Every Artist can have a second life; we're here to break Artists from
         the confines of their existing brand and label by offering them a new
         identity in the Metaverse.
@@ -40,12 +41,12 @@ const About = () => (
       <div className="w-full flex justify-center mt-6">{Arrow}</div>
     </div>
     {/* the roadmap */}
-    <div className="px-[80px] mb-10">
+    <div className="px-14 sm:px-4 sm:w-1/2 mb-10 mx-auto">
       <div className="text-[32px] text-center uppercase pb-6">The Roadmap</div>
       {/* phase 1 graphic here */}
       <div className="flex items-center justify-center space-x-3">
         <div className="h-full">{RedPolygon}</div>
-        <div className="h-full text-metacrateRed text-[24pz]">phase 1</div>
+        <div className="h-full text-metacrateRed text-[24px]">phase 1</div>
       </div>
       <ul className="pt-6 pb-12">
         <li>
@@ -161,20 +162,36 @@ const About = () => (
 
     {/* TO DO: ARTIST APPLICATION */}
 
-    {/* footer / the team */}
-    <div className="w-full h-[230px] px-10 bg-metacrateRed">
+    {/* MOBILE footer / the team */}
+    <div className="w-full h-[230px] px-10 bg-metacrateRed lg:hidden">
       <div className="h-full flex flex-col justify-between py-8">
         <div className="font-ubuntu text-metacrateWhite text-center text-[32px]">
           THE TEAM
         </div>
         {/* three logos */}
-        <div className="flex justify-between px-3">
+        <div className="flex justify-between px-3 sm:px-20">
           <Image src={web3devs} alt="web3 devs logo" />
           <Image src={thirdbrain} alt="thirdbrain logo" />
           <Image src={uc} alt="uc logo" />
         </div>
       </div>
     </div>
+
+    {/* WEB footer / the team */}
+    <div className="w-full h-[230px] px-10 bg-metacrateBlack hidden lg:block">
+      <div className="h-full flex flex-col justify-between py-8">
+        <div className="font-ubuntu text-metacrateWhite text-center text-[32px]">
+          THE TEAM
+        </div>
+        {/* three logos */}
+        <div className="flex justify-between px-3 sm:px-20">
+          <Image src={web3devs} alt="web3 devs logo" />
+          <Image src={thirdbrain} alt="thirdbrain logo" />
+          <Image src={uc} alt="uc logo" />
+        </div>
+      </div>
+    </div>
+    <Footer />
   </div>
 );
 
