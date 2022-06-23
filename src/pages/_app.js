@@ -62,20 +62,20 @@ const App = ({ Component, pageProps }) => {
       <Head>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         {/* <!-- Primary Meta Tags --> */}
-        <title>Duppies</title>
-        <meta name="title" content={`Duppies`} />
+        <title>METACRATE</title>
+        <meta name="title" content={`METACRATE`} />
         <meta
           name="description"
-          content={`Duppies: A new NFT project from the team that brought you DeGods`}
+          content={`METACRATE: Experience music collecting the Web3 way.`}
         />
 
         {/* <!-- Open Graph / Facebook --> */}
         <meta property="og:type" content="website" />
         <meta property="og:url" content={`https://${generalConfig.baseUrl}`} />
-        <meta property="og:title" content={`Duppies`} />
+        <meta property="og:title" content={`METACRATE`} />
         <meta
           property="og:description"
-          content={`Duppies: A new NFT project from the team that brought you DeGods`}
+          content={`METACRATE: Experience music collecting the Web3 way.`}
         />
         <meta
           property="og:image"
@@ -85,10 +85,10 @@ const App = ({ Component, pageProps }) => {
         {/* <!-- Twitter --> */}
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:url" content={`https://${generalConfig.baseUrl}`} />
-        <meta property="twitter:title" content={`Duppies`} />
+        <meta property="twitter:title" content={`METACRATE`} />
         <meta
           property="twitter:description"
-          content={`Duppies: A new NFT project from the team that brought you DeGods`}
+          content={`METACRATE: Experience music collecting the Web3 way.`}
         />
         <meta
           property="twitter:image"
