@@ -4,9 +4,9 @@ import cratesplit from "../components/shared/assets/cratesplit.png";
 import Arrow from "../components/shared/assets/Arrow";
 import RedPolygon from "../components/shared/assets/RedPolygon";
 
-import thirdbrain from "../components/shared/assets/THIRDBRAIN.png";
-import web3devs from "../components/shared/assets/WEB3DEVS.png";
-import uc from "../components/shared/assets/uc.png";
+import thirdbrain from "../components/shared/assets/THIRDBRAIN.svg";
+import web3devs from "../components/shared/assets/WEB3DEVS.svg";
+import uc from "../components/shared/assets/uc.svg";
 import Footer from "../components/Footer";
 // need these icons in SVG if possible, like this:
 //import ThirdBrain from "../components/shared/assets/thirdbrain";
