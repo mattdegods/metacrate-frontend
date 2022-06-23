@@ -14,7 +14,7 @@ const NavBar = () => {
   return (
     <>
       {/* web menu */}
-      <div className="flex h-[75px] w-full shadow-sm items-center bg-metacrateRed">
+      <div className="flex h-[64px] w-full shadow-md items-center bg-metacrateRed">
         {/* mobile menu icon */}
         <div className="flex lg:hidden ml-[20px] z-30">
           <div
@@ -24,7 +24,7 @@ const NavBar = () => {
             {MenuClosed}
           </div>
         </div>
-        <div className="pt-2">
+        <div className="pt-2 ml-2">
           <Link href="/">
             <a>
               <Image
@@ -37,23 +37,31 @@ const NavBar = () => {
           </Link>
         </div>
         {/* menu div */}
-        {/* <div className="flex items-center space-x-10 ml-auto sm:mr-[56px] mr-[20px] z-10">
+        <div className="text-white flex items-center space-x-10 ml-auto mr-6 sm:mr-10 z-10">
           <div className="hidden lg:flex">
-            <a href="https://discord.gg/dedao" target="_blank" rel="noreferrer">
-              Contact
-            </a>
-          </div>
-          <div className="hidden lg:flex">
-            <Link href="/faq">
-            <a>FAQ</a>
+            <Link href="/about">
+              <a>ABOUT US</a>
             </Link>
           </div>
-        </div> */}
-
-        {/* connect wallet button */}
-        <div className="bg-[#B82628] text-metacrateWhite rounded-lg px-4 py-2 ml-auto mr-4">
-          CONNECT
-        </div>
+          <div className="hidden lg:flex">
+            <Link href="/mint">
+              <a>MINT</a>
+            </Link>
+          </div>
+          <div className="hidden lg:flex">
+            <Link href="/records">
+              <a>MY RECORDS</a>
+            </Link>
+          </div>
+          <div className="hidden lg:flex opacity-50 hover:cursor-not-allowed">
+            {/* <Link href="/store"> */}
+              <a>RECORD STORE</a>
+            {/* </Link> */}
+          </div>
+          <div className="bg-[#B82628] text-metacrateWhite rounded-lg px-4 py-2">
+            CONNECT
+          </div>
+        </div>  
       </div>
 
       {/* mobile menu */}
@@ -61,7 +69,7 @@ const NavBar = () => {
         <div
           className={`lg:hidden bg-metacrateRed flex items-start pb-6 
             transition-all ${open ? "opacity-100" : "opacity-0"} w-full
-            overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 
+            overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0
             z-50 h-screen lg:inset-0 h-modal ml-0`}
         >
           <div
@@ -72,16 +80,6 @@ const NavBar = () => {
               className="w-full h-[80px] px-3 items-center 
               flex flex-row justify-between"
             >
-              {/* <div className="flex mr-auto cursor-pointer">
-                <Link href="https://www.degods.com/">
-                  <a><Image
-                    src={patch}
-                    height="31px"
-                    width="27px"
-                    alt="DeGods Patch Logo"
-                  /></a>
-                </Link>
-              </div> */}
               <div
                 className="flex ml-auto cursor-pointer"
                 onClick={() => setOpen(false)}
@@ -89,7 +87,7 @@ const NavBar = () => {
                 {MenuOpen}
               </div>
             </div>
-            <div className="text-center text-metacrateWhite uppercase text-[40px] pt-20">
+            <div className="text-center text-metacrateWhite uppercase text-[40px] py-[10%]">
               <div className="my-6">
                 <Link href="/about">
                   <a>about</a>
