@@ -52,22 +52,29 @@ const Records = () => {
       </div>
       {/* mobile header */}
       <div className="py-8 mt-8 w-full text-center lg:hidden">
-        <div className="text-[32px] uppercase text-metacrateWhite">
-          My Records
+        <div className="mb-8">
+          <div className="text-[32px] uppercase text-metacrateWhite mb-8">
+            My Records
+          </div>
+          <div className="w-[60%] mx-auto text-center border border-red-500">
+            <div className="flex flex-row flex-wrap justify-between">
+              {/* <Image src={shelves} alt="empty shelves" /> */}
+              {recordData.map((item, index) => (
+                <div className="px-3 mb-6 hover:cursor-pointer" key={index}>
+                  <RecordNFT
+                    image={item.image}
+                    artist={item.artist}
+                    title={item.title}
+                    mp3={item.mp3}
+                  />
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
-        <div className="w-[60%] mx-auto text-center border border-red-500">
-          <div className="flex flex-row flex-wrap justify-between">
-            {/* <Image src={shelves} alt="empty shelves" /> */}
-            {recordData.map((item, index) => (
-              <div className="px-3 mb-6 hover:cursor-pointer" key={index}>
-                <RecordNFT
-                  image={item.image}
-                  artist={item.artist}
-                  title={item.title}
-                  mp3={item.mp3}
-                />
-              </div>
-            ))}
+        <div>
+          <div className="text-[32px] uppercase text-metacrateWhite mb-8">
+            My Crate
           </div>
         </div>
       </div>
