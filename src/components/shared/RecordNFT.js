@@ -8,10 +8,11 @@ const RecordNFT = ({ image, artist, title, mp3 }) => {
     // 2. artist name, song name
     // 3. mp3 of song
 
-  return(
+  // const handleClick = 
+
+  return (
     <div className="w-fit h-fit shadow-lg">
       <Image src={image} width="80px" height="80px" alt="NFT" />
-      {/* {console.log(`${title} by ${artist} with image location ${image}`)} */}
     </div>
   );
 };

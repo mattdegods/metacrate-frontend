@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../components/shared/Navbar";
 import RecordNFT from "../components/shared/RecordNFT";
-import Image from "next/image";
 import shelves from "../components/shared/assets/shelves.png";
 
 const recordData = [
@@ -40,10 +39,10 @@ const recordData = [
 const Records = () => {
   const [viewerOpen, setViewerOpen] = useState(false);
 
-  const songViewer = () => {
-    setViewerOpen(true);
+  const songViewer = ({item}) => {
+    // setViewerOpen(true);
     // make modal window visible containing song info
-    console.log("Clicked: ");
+    console.log("Clicked: ", item.key);
   };
 
   return (
@@ -60,7 +59,7 @@ const Records = () => {
           <div className="flex flex-row flex-wrap justify-between">
             {/* <Image src={shelves} alt="empty shelves" /> */}
             {recordData.map((item, index) => (
-              <div className="px-3 mb-6" key={index} onClick={songViewer}>
+              <div className="px-3 mb-6 hover:cursor-pointer" key={index}>
                 <RecordNFT
                   image={item.image}
                   artist={item.artist}
