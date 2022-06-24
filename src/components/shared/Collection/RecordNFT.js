@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
-// import Modal from "./Modal";
+import Modal from "./Modal";
 
 const RecordNFT = ({ image, artist, title, mp3 }) => {
 
@@ -14,7 +14,6 @@ const RecordNFT = ({ image, artist, title, mp3 }) => {
 
   const handleClick = () => {
     // console.log(`You clicked ${title} by ${artist}!`)
-    // modal component shows
     setShowModal(!showModal);
   }
 
@@ -23,9 +22,14 @@ const RecordNFT = ({ image, artist, title, mp3 }) => {
       <div className="w-fit h-fit shadow-lg" onClick={handleClick}>
         <Image src={image} width="80px" height="80px" alt="NFT" />
       </div>
-      {/* <div className={`absolute ${showModal ? 'z-50 opacity-100' : '-z-10 opacity-0'}`}>
-        <Modal artist={artist} title={title} />
-      </div> */}
+      <div className={`absolute top-20 left-0 right-0 ${showModal ? 'z-50 opacity-100' : '-z-10 opacity-0'}`}>
+        <Modal 
+          artist={artist} 
+          title={title} 
+          image={image} 
+          handleMenu={handleClick} 
+        />
+      </div>
     </>
   );
 };

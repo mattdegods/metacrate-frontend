@@ -19,7 +19,7 @@ const recordData = [
   {
     title: "Anything",
     artist: "Burn Wallstreet",
-    image: "/images/vinyl3.svg",
+    image: "/images/vinyl2.svg",
     mp3: "sample3",
   },
   {
@@ -37,13 +37,6 @@ const recordData = [
 ];
 
 const Records = () => {
-  const [viewerOpen, setViewerOpen] = useState(false);
-
-  const songViewer = ({item}) => {
-    // setViewerOpen(true);
-    // make modal window visible containing song info
-    console.log("Clicked: ", item.key);
-  };
 
   return (
     <div className="bg-metacrateBlack min-h-screen">
@@ -65,7 +58,7 @@ const Records = () => {
                     image={item.image}
                     artist={item.artist}
                     title={item.title}
-                    mp3={item.mp3}
+                    // mp3={item.mp3}
                   />
                 </div>
               ))}
