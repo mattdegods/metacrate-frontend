@@ -8,12 +8,16 @@ const RecordNFT = ({ image, artist, title, mp3 }) => {
     // 2. artist name, song name
     // 3. mp3 of song
 
-  // const handleClick = 
+  const handleClick = () => {
+    console.log(`You clicked ${title} by ${artist}!`)
+  }
 
   return (
-    <div className="w-fit h-fit shadow-lg">
-      <Image src={image} width="80px" height="80px" alt="NFT" />
-    </div>
+    <>
+      <div className="w-fit h-fit shadow-lg" onClick={handleClick}>
+        <Image src={image} width="80px" height="80px" alt="NFT" />
+      </div>
+    </>
   );
 };
 
