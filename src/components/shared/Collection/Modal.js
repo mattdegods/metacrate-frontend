@@ -3,12 +3,13 @@ import Close from "../Close";
 
 const Modal = ({ image, artist, title, mp3, handleMenu }) => {
   return (
-    <div className="rounded-lg bg-white text-black p-6 mx-2 my-3">
-      <div className="absolute top-6 right-6" onClick={() => {handleMenu()}}>
-        <Close color="black" />
+    <div className="rounded-xl bg-metacrateRed text-metacrateWhite px-6 py-8 mx-2 my-3 z-50">
+      <div className="absolute top-8 right-8" onClick={() => {handleMenu()}}>
+        <Close color="white" />
       </div>
+      <p>{title}</p>
       <Image src={image} width="250px" height="250px" alt="music NFT image" />
-      <p>{`This is ${title} by ${artist}!`}</p>
+      <p className=" font-extrabold">{artist}</p>
     </div>
   ) 
 }
