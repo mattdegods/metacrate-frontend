@@ -3,6 +3,7 @@ import NavBar from "../components/shared/Navbar";
 import cratesplit from "../components/shared/assets/cratesplit.png";
 import Arrow from "../components/shared/assets/Arrow";
 import RedPolygon from "../components/shared/assets/RedPolygon";
+import red_curve from "../components/shared/assets/red_curve.svg";
 
 import thirdbrain from "../components/shared/assets/THIRDBRAIN.svg";
 import web3devs from "../components/shared/assets/WEB3DEVS.svg";
@@ -82,11 +83,14 @@ const About = () => (
       {/* phase 1 graphic here */}
       <div className="flex items-center justify-center space-x-3">
         <div className="h-full">{RedPolygon}</div>
+        {/* <div className="absolute -translate-x-[113px] translate-y-[31px] -z-10">
+          <Image src={red_curve} alt="red curve lul" />
+        </div> */}
         <div className="h-full text-metacrateRed text-[24px]">phase 1</div>
       </div>
       <ul className="pt-6 pb-12">
         {/* dashed line */}
-        <div className="absolute h-[490px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[50px] translate-y-6 sm:hidden" />
+        <div className="absolute h-[490px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[46px] translate-y-6 sm:hidden" />
 
         <li>
           <div className="pl-3 -translate-y-2">
@@ -150,7 +154,7 @@ const About = () => (
       </div>
       <ul className="pt-6 pb-12">
         {/* dashed line */}
-        <div className="absolute h-[360px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[50px] translate-y-6 sm:hidden" />
+        <div className="absolute h-[360px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[46px] translate-y-6 sm:hidden" />
         <li>
           <div className="pl-3 -translate-y-2">
             More Record Releases
