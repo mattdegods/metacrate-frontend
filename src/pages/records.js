@@ -1,8 +1,51 @@
+import React, { useState, useEffect } from "react";
 import NavBar from "../components/shared/Navbar";
+import RecordNFT from "../components/shared/RecordNFT";
 import Image from "next/image";
 import shelves from "../components/shared/assets/shelves.png";
 
+const recordData = [
+  {
+    title: "The Anthem",
+    artist: "Capitol Order",
+    image: "/images/vinyl1.svg",
+    mp3: "sample1",
+  },
+  {
+    title: "Don't Burn Me Out",
+    artist: "Capitol Order",
+    image: "/images/vinyl2.svg",
+    mp3: "sample2",
+  },
+  {
+    title: "Anything",
+    artist: "Burn Wallstreet",
+    image: "/images/vinyl3.svg",
+    mp3: "sample3",
+  },
+  {
+    title: "Yesterday",
+    artist: "Staind",
+    image: "/images/vinyl4.svg",
+    mp3: "sample4",
+  },
+  {
+    title: "Tomorrow",
+    artist: "Mayday Parade",
+    image: "/images/vinyl5.svg",
+    mp3: "sample5",
+  },
+];
+
 const Records = () => {
+  const [viewerOpen, setViewerOpen] = useState(false);
+
+  const songViewer = () => {
+    setViewerOpen(true);
+    // make modal window visible containing song info
+    console.log("Clicked: ");
+  };
+
   return (
     <div className="bg-metacrateBlack min-h-screen">
       <div>
@@ -10,27 +53,24 @@ const Records = () => {
       </div>
       {/* mobile header */}
       <div className="py-8 mt-8 w-full text-center lg:hidden">
-        <div className="text-[32px] uppercase text-metacrateWhite">My Records</div>
-        <div className="my-8 px-10">
-          <Image src={shelves} alt="empty shelves" />
+        <div className="text-[32px] uppercase text-metacrateWhite">
+          My Records
         </div>
-        {/* <div className="pb-3 text-left text-[14px] sm:text-[20px] px-10 sm:px-20">
-          Every Artist can have a second life; we're here to break Artists from
-          the confines of their existing brand and label by offering them a new
-          identity in the Metaverse.
-          <br />
-          <br />
-          Meta Crate is the first music NFT platform for recording artists to
-          release music in the Metaverse. Records will be regularly released to
-          the community of crate owners with gamified ownership, listening
-          parties, competitions, unique airdrops, artist activations and more.
-          Only crate owners will be able to mint records while everyone else
-          must purchase on the secondary markets.
-          <br />
-          <br />
-          Solana is an alternative blockchain and cryptocurrency solution to the
-          negative economic impact Ethereum has had on the environment.
-        </div> */}
+        <div className="w-[60%] mx-auto text-center border border-red-500">
+          <div className="flex flex-row flex-wrap justify-between">
+            {/* <Image src={shelves} alt="empty shelves" /> */}
+            {recordData.map((item, index) => (
+              <div className="px-3 mb-6" key={index} onClick={songViewer}>
+                <RecordNFT
+                  image={item.image}
+                  artist={item.artist}
+                  title={item.title}
+                  mp3={item.mp3}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
