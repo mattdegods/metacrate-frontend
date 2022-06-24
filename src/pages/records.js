@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import NavBar from "../components/shared/Navbar";
-import RecordNFT from "../components/shared/RecordNFT";
+import RecordNFT from "../components/shared/Collection/RecordNFT";
 import shelves from "../components/shared/assets/shelves.png";
 
 const recordData = [
