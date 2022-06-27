@@ -10,7 +10,6 @@ import myCrate from "../components/shared/assets/my_crate.png";
 
 //solana wallet
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
-import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const recordData = [
   {
@@ -53,9 +52,6 @@ const Records = () => {
   return (
     <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-hidden">
       <NavBar />
-      <div className="bg-[#B82628] rounded-lg w-fit z-40 absolute top-2 right-4">
-        <WalletMultiButton className="wallet-adapter-button" />
-      </div>
       {publicKey ? (
         // mobile
         <div className=" mt-8 w-full text-center lg:hidden">

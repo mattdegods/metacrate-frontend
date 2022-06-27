@@ -7,6 +7,10 @@ import MenuClosed from "./assets/MenuClosed";
 import MenuOpen from "./assets/MenuOpen";
 import logo from "./assets/Logo.png";
 
+//solana wallet
+import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
+
 const NavBar = () => {
   // menu state
   const [open, setOpen] = useState(false);
@@ -14,7 +18,7 @@ const NavBar = () => {
   return (
     <>
       {/* web menu */}
-      <div className="flex h-[64px] w-full shadow-md items-center bg-metacrateRed">
+      <div className="flex h-[64px] w-full shadow-none items-center bg-metacrateRed">
         {/* mobile menu icon */}
         <div className="flex lg:hidden ml-[20px] z-30">
           <div
@@ -57,6 +61,9 @@ const NavBar = () => {
             {/* <Link href="/store"> */}
             <a>RECORD STORE</a>
             {/* </Link> */}
+          </div>
+          <div className="bg-[#B82628] rounded-lg w-fit z-40">
+            <WalletMultiButton className="wallet-adapter-button" />
           </div>
         </div>
       </div>
