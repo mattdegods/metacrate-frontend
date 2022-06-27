@@ -3,6 +3,7 @@ import Image from "next/image";
 import NavBar from "../components/shared/Navbar";
 import RecordNFT from "../components/shared/Collection/RecordNFT";
 import shelves from "../components/shared/assets/shelves.png";
+import myCrate from "../components/shared/assets/my_crate.png";
 
 //solana wallet
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
@@ -79,6 +80,7 @@ const Records = () => {
             <div className="text-[32px] uppercase text-metacrateWhite mb-8">
               My Crate
             </div>
+            <Image src={myCrate} alt="Your Crate" />
           </div>
         </div>
       ) : (
