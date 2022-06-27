@@ -43,10 +43,10 @@ const NavBar = () => {
               <a>ABOUT US</a>
             </Link>
           </div>
-          <div className="hidden lg:flex">
-            <Link href="/mint">
+          <div className="hidden lg:flex opacity-50 hover:cursor-not-allowed">
+            {/* <Link href="/mint"> */}
               <a>MINT</a>
-            </Link>
+            {/* </Link> */}
           </div>
           <div className="hidden lg:flex">
             <Link href="/records">
@@ -57,9 +57,6 @@ const NavBar = () => {
             {/* <Link href="/store"> */}
               <a>RECORD STORE</a>
             {/* </Link> */}
-          </div>
-          <div className="bg-[#B82628] text-metacrateWhite rounded-lg px-4 py-2">
-            CONNECT
           </div>
         </div>  
       </div>
