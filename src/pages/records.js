@@ -79,7 +79,7 @@ const Records = () => {
                 {/* <Image src={shelves} alt="empty shelves" /> */}
                 {recordData.map((item, index) => (
                   <div className="relative" key={index}>
-                    <div className="px-3 mb-6 sm:hover:cursor-pointer sm:hover:-translate-y-3 transition-transform ease-in-out" onClick={handleMenu}>
+                    <div className="px-3 mb-6 sm:hover:cursor-pointer sm:hover:-translate-y-3 transition-transform ease-in-out duration-500" onClick={handleMenu}>
                       <Image src={item.image} height="80px" width="80px" alt="NFT album art" />
                     </div>
                     {/* modal window - music info / player */}
