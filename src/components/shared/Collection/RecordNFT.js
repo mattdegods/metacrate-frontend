@@ -19,7 +19,7 @@ const RecordNFT = ({ image, artist, title, mp3 }) => {
 
   return (
     <>
-      <div className="w-fit h-fit shadow-lg" onClick={handleClick}>
+      <div className="w-fit h-fit" onClick={handleClick}>
         <Image src={image} width="80px" height="80px" alt="NFT" />
       </div>
       <div className={`absolute top-1/3 ${showModal ? 'z-40 opacity-100 transition-opacity ease-in-out' : '-z-10 opacity-0 transition-opacity ease-in-out'}`}>

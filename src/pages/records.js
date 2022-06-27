@@ -2,7 +2,10 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import NavBar from "../components/shared/Navbar";
 import RecordNFT from "../components/shared/Collection/RecordNFT";
+
+// asset import
 import shelves from "../components/shared/assets/shelves.png";
+import single_shelf from "../components/shared/assets/single_shelf.png";
 import myCrate from "../components/shared/assets/my_crate.png";
 
 //solana wallet
@@ -60,19 +63,30 @@ const Records = () => {
             <div className="text-[32px] uppercase text-metacrateWhite mb-8">
               My Records
             </div>
-            <div className="w-[60%] mx-auto text-center border border-red-500">
+            <div className="w-[60%] mx-auto text-center">
               <div className="flex flex-row flex-wrap justify-between">
                 {/* <Image src={shelves} alt="empty shelves" /> */}
                 {recordData.map((item, index) => (
-                  <div className="px-3 mb-6 hover:cursor-pointer" key={index}>
-                    <RecordNFT
-                      image={item.image}
-                      artist={item.artist}
-                      title={item.title}
-                      // mp3={item.mp3}
-                    />
+                  <div className="relative">
+                    <div className="px-3 mb-6 hover:cursor-pointer" key={index}>
+                      <RecordNFT
+                        image={item.image}
+                        artist={item.artist}
+                        title={item.title}
+                        // mp3={item.mp3}
+                      />
+                    </div>
+                    {/* render a shelf every odd index */}
+                    {/* {index % 2 === 1 && ( */}
+                      <div className="absolute bottom-4">
+                        <Image src={single_shelf} alt="shelf" />
+                      </div>
+                    {/* )} */}
                   </div>
                 ))}
+                {/* <div className="absolute left-10 right-10">
+                  <Image src={single_shelf} alt="shelf" />
+                </div> */}
               </div>
             </div>
           </div>
