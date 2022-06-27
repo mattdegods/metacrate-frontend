@@ -48,7 +48,7 @@ const Records = () => {
   const { publicKey, signTransaction } = useWallet();
 
   return (
-    <div className="bg-metacrateBlack min-h-screen relative">
+    <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen relative">
       <NavBar />
       <div className="bg-[#B82628] rounded-lg w-fit z-40 absolute top-2 right-4">
         <WalletMultiButton className="wallet-adapter-button" />
