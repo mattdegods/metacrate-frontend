@@ -51,24 +51,30 @@ const Records = () => {
   const { publicKey, signTransaction } = useWallet();
 
   return (
-    <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen relative">
+    <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-hidden">
       <NavBar />
       <div className="bg-[#B82628] rounded-lg w-fit z-40 absolute top-2 right-4">
         <WalletMultiButton className="wallet-adapter-button" />
       </div>
-      {/* mobile */}
       {publicKey ? (
-        <div className="py-8 mt-8 w-full text-center lg:hidden">
-          <div className="mb-8">
-            <div className="text-[32px] uppercase text-metacrateWhite mb-8">
+        // mobile
+        <div className=" mt-8 w-full text-center lg:hidden">
+          <div className="">
+            <div>
+              <div className="text-[32px] uppercase text-metacrateWhite mt-10 py-6">
+                My Crate
+              </div>
+              <Image src={myCrate} alt="Your Crate" />
+            </div>
+            <div className="text-[32px] uppercase text-metacrateWhite mt-6 py-6">
               My Records
             </div>
             <div className="w-[60%] mx-auto text-center">
               <div className="flex flex-row flex-wrap justify-between">
                 {/* <Image src={shelves} alt="empty shelves" /> */}
                 {recordData.map((item, index) => (
-                  <div className="relative">
-                    <div className="px-3 mb-6 hover:cursor-pointer" key={index}>
+                  <div className="relative" key={index}>
+                    <div className="px-3 mb-6 hover:cursor-pointer">
                       <RecordNFT
                         image={item.image}
                         artist={item.artist}
@@ -78,9 +84,9 @@ const Records = () => {
                     </div>
                     {/* render a shelf every odd index */}
                     {/* {index % 2 === 1 && ( */}
-                      <div className="absolute bottom-4">
-                        <Image src={single_shelf} alt="shelf" />
-                      </div>
+                    <div className="absolute bottom-4">
+                      <Image src={single_shelf} alt="shelf" />
+                    </div>
                     {/* )} */}
                   </div>
                 ))}
@@ -89,12 +95,6 @@ const Records = () => {
                 </div> */}
               </div>
             </div>
-          </div>
-          <div>
-            <div className="text-[32px] uppercase text-metacrateWhite mb-8">
-              My Crate
-            </div>
-            <Image src={myCrate} alt="Your Crate" />
           </div>
         </div>
       ) : (
