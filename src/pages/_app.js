@@ -103,8 +103,6 @@ const App = ({ Component, pageProps }) => {
         </WalletProvider>
       </ConnectionProvider>
       <Toaster />
-      {/* StatusPage Popup */}
-      <Script src="https://vczh4gd7bl1x.statuspage.io/embed/script.js"></Script>
     </>
   );
 };
