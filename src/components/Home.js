@@ -21,11 +21,11 @@ const Home = () => {
       </div>
 
       {/* mobile crates */}
-      <div className="sm:hidden absolute bottom-16 md:bottom-24 -z-10">
+      <div className="sm:hidden absolute bottom-20 md:bottom-24 -z-10">
         <Image src={crates_mobile} alt="crate background mobile" />
       </div>
       {/* desktop crates */}
-      {/* cant get crates to show properly... */}
+      {/* attempting to get crates to show properly... */}
       <div className="hidden sm:block absolute bottom-24 xl:bottom-8 lg:bottom-16 -z-10">
         <Image src={crates_desktop} alt="crate background desktop" />
       </div>
