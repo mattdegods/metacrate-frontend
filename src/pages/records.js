@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import NavBar from "../components/shared/Navbar";
 import Footer from "../components/Footer";
-import RecordNFT from "../components/shared/Collection/RecordNFT";
+import NFTModal from "../components/shared/Collection/NFTModal";
 
 // asset import
 import shelves from "../components/shared/assets/shelves.png";
@@ -50,6 +50,13 @@ const Records = () => {
   const { connection } = useConnection();
   const { publicKey, signTransaction } = useWallet();
 
+  const [showModal, setShowModal] = useState(false);
+
+  const handleMenu = () => {
+    // console.log(`You clicked ${title} by ${artist}!`)
+    setShowModal(!showModal);
+  };
+
   return (
     <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-x-hidden lg:max-h-screen">
       <NavBar />
@@ -72,11 +79,23 @@ const Records = () => {
                 {/* <Image src={shelves} alt="empty shelves" /> */}
                 {recordData.map((item, index) => (
                   <div className="relative" key={index}>
-                    <div className="px-3 mb-6 hover:cursor-pointer hover:-translate-y-3">
-                      <RecordNFT
+                    <div className="px-3 mb-6 sm:hover:cursor-pointer sm:hover:-translate-y-3" onClick={handleMenu}>
+                      <Image src={item.image} height="80px" width="80px" alt="NFT album art" />
+                    </div>
+                    {/* modal window - music info / player */}
+                    <div
+                      className={`
+                      mx-auto fixed inset-0 h-fit w-fit top-1/3 ${
+                        showModal
+                          ? "z-50 opacity-100 transition-opacity ease-in-out"
+                          : "-z-10 opacity-0 transition-opacity ease-in-out"
+                      }`}
+                    >
+                      <NFTModal
                         image={item.image}
                         artist={item.artist}
                         title={item.title}
+                        handleMenu={handleMenu}
                         // mp3={item.mp3}
                       />
                     </div>
