@@ -47,7 +47,7 @@ const About = () => (
     {/* web header */}
     <div className="py-8 mt-8 w-full text-center hidden lg:block">
       <div className="text-[46px] uppercase">Welcome to <span className="text-metacrateRed">MetaCrate</span>.</div>
-      <div className="flex flex-row items-center px-10">
+      <div className="flex flex-row items-center justify-center px-10">
         <div className="my-8 px-10 max-w-3xl">
           <Image src={cratesplit} alt="crate description" />
         </div>
@@ -78,7 +78,7 @@ const About = () => (
     </div>
 
     {/* mobile roadmap */}
-    <div className="px-16 sm:px-4 sm:w-1/2 mb-10 mx-auto">
+    <div className="px-16 sm:px-4 sm:w-1/2 my-10 mx-auto">
       <div className="text-[32px] text-center uppercase pb-6">The Roadmap</div>
       {/* phase 1 graphic here */}
       <div className="flex items-center justify-center space-x-3">
