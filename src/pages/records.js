@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import NavBar from "../components/shared/Navbar";
+import Footer from "../components/Footer";
 import RecordNFT from "../components/shared/Collection/RecordNFT";
 
 // asset import
@@ -50,19 +51,20 @@ const Records = () => {
   const { publicKey, signTransaction } = useWallet();
 
   return (
-    <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-hidden">
+    <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-x-hidden lg:max-h-screen">
       <NavBar />
       {publicKey ? (
-        // mobile
-        <div className=" mt-8 w-full text-center lg:hidden">
-          <div className="">
-            <div>
-              <div className="text-[32px] uppercase text-metacrateWhite mt-10 py-6">
+        <div className="mt-8 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
+          <div className="lg:w-1/3 lg:h-screen">
+            <div className="mt-10 py-6 px-20 lg:px-10 lg:mt-0 lg:py-0">
+              <p className="text-[32px] uppercase text-metacrateWhite lg:pb-8">
                 My Crate
-              </div>
-              <Image src={myCrate} alt="Your Crate" />
+              </p>
+              <Image src={myCrate} layout="responsive" alt="Your Crate" />
             </div>
-            <div className="text-[32px] uppercase text-metacrateWhite mt-6 py-6">
+          </div>
+          <div className="">
+            <div className="text-[32px] uppercase text-metacrateWhite mt-6 py-6 lg:mt-0 lg:py-0 lg:pb-8">
               My Records
             </div>
             <div className="w-[60%] mx-auto text-center">
@@ -70,7 +72,7 @@ const Records = () => {
                 {/* <Image src={shelves} alt="empty shelves" /> */}
                 {recordData.map((item, index) => (
                   <div className="relative" key={index}>
-                    <div className="px-3 mb-6 hover:cursor-pointer">
+                    <div className="px-3 mb-6 hover:cursor-pointer hover:-translate-y-3">
                       <RecordNFT
                         image={item.image}
                         artist={item.artist}
@@ -103,6 +105,9 @@ const Records = () => {
           </div>
         </div>
       )}
+      <div className="hidden lg:block fixed bottom-0 w-full">
+        <Footer />
+      </div>
     </div>
   );
 };
