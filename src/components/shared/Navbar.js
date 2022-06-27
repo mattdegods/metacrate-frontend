@@ -45,7 +45,7 @@ const NavBar = () => {
           </div>
           <div className="hidden lg:flex opacity-50 hover:cursor-not-allowed">
             {/* <Link href="/mint"> */}
-              <a>MINT</a>
+            <a>MINT</a>
             {/* </Link> */}
           </div>
           <div className="hidden lg:flex">
@@ -55,10 +55,10 @@ const NavBar = () => {
           </div>
           <div className="hidden lg:flex opacity-50 hover:cursor-not-allowed">
             {/* <Link href="/store"> */}
-              <a>RECORD STORE</a>
+            <a>RECORD STORE</a>
             {/* </Link> */}
           </div>
-        </div>  
+        </div>
       </div>
 
       {/* mobile menu */}
@@ -70,7 +70,7 @@ const NavBar = () => {
             z-50 h-screen lg:inset-0 h-modal ml-0`}
         >
           <div
-            className={`absolute flex flex-col space-y-[38px] h-full w-full 
+            className={`absolute flex flex-col justify-between h-full w-full 
             top-0 left-0 px-5 md:px-10`}
           >
             <div
@@ -84,8 +84,8 @@ const NavBar = () => {
                 {MenuOpen}
               </div>
             </div>
-            <div className="text-center text-metacrateWhite uppercase text-[40px] py-[10%]">
-            <div className="my-6">
+            <div className="text-center text-metacrateWhite uppercase text-[40px] mb-8">
+              <div className="my-6">
                 <Link href="/">
                   <a>home</a>
                 </Link>
@@ -106,11 +106,11 @@ const NavBar = () => {
                 (coming soon)
               </div>
             </div>
-          </div>
-          <div className="mx-auto mt-auto text-metacrateWhite">
+            <div className="mx-auto pb-8 text-metacrateWhite">
             <Link href="/">
               <a>metacrate.com</a>
             </Link>
+            </div>
           </div>
         </div>
       )}
