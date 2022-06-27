@@ -85,16 +85,17 @@ const NavBar = () => {
               </div>
             </div>
             <div className="text-center text-metacrateWhite uppercase text-[40px] py-[10%]">
+            <div className="my-6">
+                <Link href="/">
+                  <a>home</a>
+                </Link>
+              </div>
               <div className="my-6">
                 <Link href="/about">
                   <a>about</a>
                 </Link>
               </div>
-              <div className="my-6">
-                <Link href="/mint">
-                  <a>mint</a>
-                </Link>
-              </div>
+              <div className="text-metacrateWhite/40 mt-6">mint</div>
               <div className="my-6">
                 <Link href="/records">
                   <a>my records</a>
