@@ -3,7 +3,7 @@ import Close from "../Close";
 
 const NFTModal = ({ image, artist, title, mp3, handleMenu }) => {
   return (
-    <div className="rounded-xl bg-metacrateRed text-metacrateWhite px-12 py-8 my-3">
+    <div className="rounded-xl bg-metacrateRed text-metacrateWhite px-16 py-12">
       <div className="absolute top-8 right-8" onClick={() => {handleMenu()}}>
         <Close color="white" />
       </div>
