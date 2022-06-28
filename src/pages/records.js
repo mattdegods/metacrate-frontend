@@ -51,14 +51,15 @@ const Records = () => {
   const { publicKey, signTransaction } = useWallet();
 
   const [showModal, setShowModal] = useState(false);
+  const [activeNFT, setActiveNFT] = useState(1);
 
   const handleMenu = () => {
-    // console.log(`You clicked ${title} by ${artist}!`)
     setShowModal(!showModal);
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-x-hidden lg:max-h-screen">
+    // from-[#ff8e44] via-[#d83e40] to-[#35126a]
+    <div className="bg-gradient-to-t from-metacrateWhite via-[#ff8e44] to-[#d83e40] min-h-screen overflow-x-hidden lg:max-h-screen">
       <NavBar />
       {publicKey ? (
         <div className="mt-8 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
@@ -79,24 +80,18 @@ const Records = () => {
                 {/* <Image src={shelves} alt="empty shelves" /> */}
                 {recordData.map((item, index) => (
                   <div className="relative" key={index}>
-                    <div className="px-3 mb-6 sm:hover:cursor-pointer sm:hover:-translate-y-3 transition-transform ease-in-out duration-500" onClick={handleMenu}>
-                      <Image src={item.image} height="80px" width="80px" alt="NFT album art" />
-                    </div>
-                    {/* modal window - music info / player */}
                     <div
-                      className={`
-                      mx-auto fixed inset-0 h-fit w-fit top-1/3 ${
-                        showModal
-                          ? "z-50 opacity-100 transition-opacity ease-in-out"
-                          : "-z-10 opacity-0 transition-opacity ease-in-out"
-                      }`}
+                      className="px-3 mb-6 sm:hover:cursor-pointer sm:hover:-translate-y-3 transition-transform ease-in-out duration-500"
+                      onClick={() => {
+                        setShowModal(!showModal);
+                        setActiveNFT(index);
+                      }}
                     >
-                      <NFTModal
-                        image={item.image}
-                        artist={item.artist}
-                        title={item.title}
-                        handleMenu={handleMenu}
-                        // mp3={item.mp3}
+                      <Image
+                        src={item.image}
+                        height="80px"
+                        width="80px"
+                        alt="NFT album art"
                       />
                     </div>
                     {/* render a shelf every odd index */}
@@ -111,6 +106,23 @@ const Records = () => {
                   <Image src={single_shelf} alt="shelf" />
                 </div> */}
               </div>
+            </div>
+            {/* modal window - music info / player */}
+            <div
+              className={`
+                      mx-auto fixed inset-0 h-fit w-fit top-1/3 ${
+                        showModal
+                          ? "z-50 opacity-100 transition-opacity ease-in-out"
+                          : "-z-10 opacity-0 transition-opacity ease-in-out"
+                      }`}
+            >
+              <NFTModal
+                image={recordData[activeNFT].image}
+                artist={recordData[activeNFT].artist}
+                title={recordData[activeNFT].title}
+                handleMenu={handleMenu}
+                // mp3={item.mp3}
+              />
             </div>
           </div>
         </div>
