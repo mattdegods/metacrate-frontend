@@ -115,13 +115,11 @@ const Records = () => {
           </div>
         </div>
       ) : (
-        <div className="py-8 mt-8 w-full text-center lg:hidden">
-          <div className="mb-8">
-            <div className="text-[28px] uppercase text-metacrateWhite mb-8 px-4">
-              Connect your wallet to experience your collection!
-            </div>
-            <Image src={shelves} alt="empty shelves" />
+        <div className="mt-8 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
+          <div className="max-w-xl flex items-center text-[28px] lg:text-[40px] uppercase text-metacrateWhite mb-8 lg:pb-10 px-4">
+            Connect your wallet to experience your collection!
           </div>
+          <Image src={shelves} alt="empty shelves" />
         </div>
       )}
       <div className="hidden lg:block fixed bottom-0 w-full">
