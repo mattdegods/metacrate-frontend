@@ -59,21 +59,23 @@ const Records = () => {
 
   return (
     // from-[#ff8e44] via-[#d83e40] to-[#35126a]
-    <div className="bg-gradient-to-t from-metacrateWhite via-[#ff8e44] to-[#d83e40] min-h-screen overflow-x-hidden lg:max-h-screen">
+    <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-x-hidden lg:max-h-screen">
       <NavBar />
       {publicKey ? (
         <div className="mt-8 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
           <div className="lg:w-1/3 lg:h-screen">
-            <div className="mt-10 py-6 px-20 lg:px-10 lg:mt-0 lg:py-0">
+            <div className="mt-10 py-6 px-10 lg:px-10 lg:mt-0 lg:py-0">
               <p className="text-[32px] uppercase text-metacrateWhite lg:pb-8">
-                My Crate
+                Crate Collection
               </p>
-              <Image src={myCrate} layout="responsive" alt="Your Crate" />
+              <div>
+                <Image src={myCrate} layout="responsive" alt="Your Crate" />
+              </div>
             </div>
           </div>
           <div className="">
             <div className="text-[32px] uppercase text-metacrateWhite mt-6 py-6 lg:mt-0 lg:py-0 lg:pb-8">
-              My Records
+              Record Collection
             </div>
             <div className="w-[60%] mx-auto text-center">
               <div className="flex flex-row flex-wrap justify-between">
@@ -83,14 +85,14 @@ const Records = () => {
                     <div
                       className="px-3 mb-6 sm:hover:cursor-pointer sm:hover:-translate-y-3 transition-transform ease-in-out duration-500"
                       onClick={() => {
-                        setShowModal(!showModal);
                         setActiveNFT(index);
+                        setShowModal(!showModal);
                       }}
                     >
                       <Image
                         src={item.image}
-                        height="80px"
-                        width="80px"
+                        width="110px"
+                        height="110px"
                         alt="NFT album art"
                       />
                     </div>

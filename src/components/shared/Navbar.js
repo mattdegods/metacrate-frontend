@@ -47,14 +47,9 @@ const NavBar = () => {
               <a>ABOUT US</a>
             </Link>
           </div>
-          <div className="hidden lg:flex opacity-50 hover:cursor-not-allowed">
-            {/* <Link href="/mint"> */}
-            <a>MINT</a>
-            {/* </Link> */}
-          </div>
           <div className="hidden lg:flex">
             <Link href="/records">
-              <a>MY RECORDS</a>
+              <a>MY COLLECTION</a>
             </Link>
           </div>
           <div className="hidden lg:flex opacity-50 hover:cursor-not-allowed">
@@ -102,10 +97,9 @@ const NavBar = () => {
                   <a>about</a>
                 </Link>
               </div>
-              <div className="text-metacrateWhite/40 mt-6">mint</div>
               <div className="my-6">
                 <Link href="/records">
-                  <a>my records</a>
+                  <a>my collection</a>
                 </Link>
               </div>
               <div className="text-metacrateWhite/40 mt-6">record store</div>
