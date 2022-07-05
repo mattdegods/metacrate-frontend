@@ -136,9 +136,6 @@ const Records = () => {
           <Image src={shelves} alt="empty shelves" />
         </div>
       )}
-      <div className="hidden lg:block fixed bottom-0 w-full">
-        <Footer />
-      </div>
     </div>
   );
 };

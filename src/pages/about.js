@@ -236,8 +236,6 @@ const About = () => (
         </div>
       </div>
     </div>
-    <div className="hidden lg:block"><Footer /></div>
-    
   </div>
 );
 
