@@ -1,7 +1,6 @@
 import Image from "next/image";
 import twitter from "./shared/assets/twitter.png";
 import discord from "./shared/assets/discord.png";
-import medium from "./shared/assets/medium.png";
 
 const Footer = () => {
   return (

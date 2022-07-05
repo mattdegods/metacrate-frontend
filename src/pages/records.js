@@ -17,32 +17,55 @@ const recordData = [
     title: "The Anthem",
     artist: "Capitol Order",
     image: "/images/vinyl1.svg",
-    mp3: "sample1",
+    mp4: "sample1",
   },
   {
     title: "Don't Burn Me Out",
     artist: "Capitol Order",
     image: "/images/vinyl2.svg",
-    mp3: "sample2",
+    mp4: "sample2",
   },
   {
     title: "Anything",
     artist: "Burn Wallstreet",
     image: "/images/vinyl2.svg",
-    mp3: "sample3",
+    mp4: "sample3",
   },
   {
     title: "Yesterday",
     artist: "Staind",
     image: "/images/vinyl4.svg",
-    mp3: "sample4",
+    mp4: "sample4",
   },
   {
     title: "Tomorrow",
     artist: "Mayday Parade",
     image: "/images/vinyl5.svg",
-    mp3: "sample5",
+    mp4: "sample5",
   },
+];
+
+const crateData = [
+  {
+    name: "Crate #69",
+    image: "/images/my_crate.png"
+  },
+  {
+    name: "Crate #420",
+    image: "/images/my_crate.png"
+  },
+  {
+    name: "Crate #420",
+    image: "/images/my_crate.png"
+  },
+  {
+    name: "Crate #420",
+    image: "/images/my_crate.png"
+  },
+  {
+    name: "Crate #420",
+    image: "/images/my_crate.png"
+  }
 ];
 
 const Records = () => {
@@ -58,28 +81,44 @@ const Records = () => {
   };
 
   return (
-    // from-[#ff8e44] via-[#d83e40] to-[#35126a]
     <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-x-hidden lg:max-h-screen">
       <NavBar />
       {publicKey ? (
-        <div className="mt-8 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
-          <div className="lg:w-1/3 lg:h-screen">
+        <div className="mt-12 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
+          <div className="lg:w-1/3">
             <div className="mt-10 py-6 px-10 lg:px-10 lg:mt-0 lg:py-0">
-              <p className="text-[32px] uppercase text-metacrateWhite lg:pb-8">
+              <div className="text-[32px] uppercase text-metacrateWhite pb-8">
                 Crate Collection
-              </p>
-              <div>
-                <Image src={myCrate} layout="responsive" alt="Your Crate" />
+              </div>
+              <div className="w-full">
+                <div className="flex flex-row flex-wrap justify-between">
+                  {crateData.map((item, index) => (
+                    <div className="relative" key={index}>
+                      <div
+                        className={`px-3 mb-6 sm:hover:-translate-y-3 transition-transform ease-in-out duration-500
+                        ${crateData.length === 1 && 'w-full'}
+                        ${(crateData.length > 1 && crateData.length <= 4) && 'w-[200px]'}
+                        ${(crateData.length > 4) && 'w-[140px]'}
+                        `}
+                      >
+                        <img
+                          src={item.image}
+                          alt="NFT album art"
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-          <div className="">
+          {/* my records */}
+          <div>
             <div className="text-[32px] uppercase text-metacrateWhite mt-6 py-6 lg:mt-0 lg:py-0 lg:pb-8">
               Record Collection
             </div>
             <div className="w-[60%] mx-auto text-center">
               <div className="flex flex-row flex-wrap justify-between">
-                {/* <Image src={shelves} alt="empty shelves" /> */}
                 {recordData.map((item, index) => (
                   <div className="relative" key={index}>
                     <div
@@ -104,26 +143,23 @@ const Records = () => {
                     {/* )} */}
                   </div>
                 ))}
-                {/* <div className="absolute left-10 right-10">
-                  <Image src={single_shelf} alt="shelf" />
-                </div> */}
               </div>
             </div>
             {/* modal window - music info / player */}
             <div
-              className={`
-                      mx-auto fixed inset-0 h-fit w-fit top-1/3 ${
-                        showModal
-                          ? "z-50 opacity-100 transition-opacity ease-in-out"
-                          : "-z-10 opacity-0 transition-opacity ease-in-out"
-                      }`}
+              className={`mx-auto fixed inset-0 h-fit w-fit top-1/3 
+                ${showModal 
+                  ? "z-50 opacity-100 transition-opacity ease-in-out"
+                  : "-z-10 opacity-0 transition-opacity ease-in-out"
+                }
+              `}
             >
               <NFTModal
                 image={recordData[activeNFT].image}
                 artist={recordData[activeNFT].artist}
                 title={recordData[activeNFT].title}
                 handleMenu={handleMenu}
-                // mp3={item.mp3}
+                // mp4={item.mp4}
               />
             </div>
           </div>
