@@ -17,15 +17,6 @@ const Footer = () => {
           <div className="">
             <Image src={twitter} height="80px" width="80px" alt="twitter" />
           </div>
-          {/* mobile social icons */}
-          {/* <div className="px-20 flex flex-row justify-between sm:hidden">
-            <div>
-              <Image src={discord} height="80px" width="80px" alt="discord" />
-            </div>
-            <div>
-              <Image src={twitter} height="80px" width="80px" alt="twitter" />
-            </div>
-          </div> */}
         </div>
       </div>
       <div className="h-[20%] w-full px-10 bg-metacrateBlack">

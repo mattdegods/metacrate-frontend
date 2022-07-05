@@ -6,6 +6,8 @@ import Link from "next/link";
 import MenuClosed from "./assets/MenuClosed";
 import MenuOpen from "./assets/MenuOpen";
 import logo from "./assets/Logo.png";
+import twitter from "./assets/twitter.png";
+import discord from "./assets/discord.png";
 
 //solana wallet
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
@@ -28,7 +30,7 @@ const NavBar = () => {
             {MenuClosed}
           </div>
         </div>
-        <div className="pt-2 ml-2">
+        <div className="pt-2 ml-4 flex flex-row items-center">
           <Link href="/">
             <a>
               <Image
@@ -39,6 +41,13 @@ const NavBar = () => {
               />
             </a>
           </Link>
+          {/* mobile social icons */}
+          <div>
+            <Image src={discord} height="60px" width="60px" alt="discord" />
+          </div>
+          <div>
+            <Image src={twitter} height="60px" width="60px" alt="twitter" />
+          </div>
         </div>
         {/* menu div */}
         <div className="text-white flex items-center space-x-10 ml-auto mr-6 sm:mr-10 z-10">
@@ -57,6 +66,7 @@ const NavBar = () => {
             <a>RECORD STORE</a>
             {/* </Link> */}
           </div>
+
           <div className="bg-[#B82628] rounded-lg w-fit z-40">
             <WalletMultiButton className="wallet-adapter-button" />
           </div>
@@ -108,9 +118,9 @@ const NavBar = () => {
               </div>
             </div>
             <div className="mx-auto pb-8 text-metacrateWhite">
-            <Link href="/">
-              <a>metacrate.com</a>
-            </Link>
+              <Link href="/">
+                <a>metacrate.com</a>
+              </Link>
             </div>
           </div>
         </div>
