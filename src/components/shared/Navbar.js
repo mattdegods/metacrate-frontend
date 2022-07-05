@@ -18,7 +18,7 @@ const NavBar = () => {
   return (
     <>
       {/* web menu */}
-      <div className="flex h-[64px] w-full shadow-none items-center bg-metacrateRed">
+      <div className="flex h-[64px] md:h-[100px] w-full shadow-none items-center bg-metacrateRed">
         {/* mobile menu icon */}
         <div className="flex lg:hidden ml-[20px] z-30">
           <div
