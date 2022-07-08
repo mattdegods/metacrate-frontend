@@ -87,7 +87,7 @@ const Records = () => {
         <div className="mt-12 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
           <div className="lg:w-1/3">
             <div className="mt-10 py-6 px-10 lg:px-10 lg:mt-0 lg:py-0">
-              <div className="text-[32px] uppercase text-metacrateWhite pb-8">
+              <div className="bg-gradient-to-l from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text text-[32px] uppercase text-transparent pb-8">
                 Crate Collection
               </div>
               <div className="w-full">
@@ -114,7 +114,7 @@ const Records = () => {
           </div>
           {/* my records */}
           <div>
-            <div className="text-[32px] uppercase text-metacrateWhite mt-6 py-6 lg:mt-0 lg:py-0 lg:pb-8">
+            <div className="bg-gradient-to-r from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text text-[32px] uppercase text-transparent mt-6 py-6 lg:mt-0 lg:py-0 lg:pb-8">
               Record Collection
             </div>
             <div className="w-[60%] mx-auto text-center">
