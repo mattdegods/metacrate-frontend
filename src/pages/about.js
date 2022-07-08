@@ -3,14 +3,10 @@ import NavBar from "../components/shared/Navbar";
 import cratesplit from "../components/shared/assets/cratesplit.png";
 import Arrow from "../components/shared/assets/Arrow";
 import RedPolygon from "../components/shared/assets/RedPolygon";
-import red_curve from "../components/shared/assets/red_curve.svg";
 
 import thirdbrain from "../components/shared/assets/THIRDBRAIN.svg";
 import web3devs from "../components/shared/assets/WEB3DEVS.svg";
 import uc from "../components/shared/assets/uc.svg";
-import Footer from "../components/Footer";
-// need these icons in SVG if possible, like this:
-//import ThirdBrain from "../components/shared/assets/thirdbrain";
 
 const About = () => (
   <div className="relative">
@@ -45,7 +41,7 @@ const About = () => (
     </div>
 
     {/* web header */}
-    <div className="py-8 mt-8 w-full text-center hidden lg:block">
+    <div className="pt-8 mt-8 w-full text-center hidden lg:block bg-metal bg-cover">
       <div className="text-[46px] uppercase">Welcome to <span className="text-metacrateRed">MetaCrate</span>.</div>
       <div className="flex flex-row items-center justify-center px-10">
         <div className="my-8 px-10 max-w-3xl">
@@ -69,7 +65,7 @@ const About = () => (
           negative economic impact Ethereum has had on the environment.
         </div>
       </div>
-      <div className="w-full flex justify-center mt-6 bg-[url('/images/cratesbg_desk.png')] bg-cover h-[227px]">
+      <div className="w-full flex justify-center mt-6 h-[227px]">
         <div className="w-full text-center my-auto">
           <p className="uppercase text-metacrateWhite text-[36px] pb-6">Read Our Roadmap</p>
           <Image src="/images/Arrow_web.svg" width="215px" height="67px" alt="arrow" />
@@ -78,7 +74,7 @@ const About = () => (
     </div>
 
     {/* mobile roadmap */}
-    <div className="px-16 sm:px-4 sm:w-1/2 my-10 mx-auto">
+    <div className="px-16 sm:px-4 sm:w-1/2 my-10 mx-auto lg:hidden">
       <div className="text-[32px] text-center uppercase pb-6">The Roadmap</div>
       {/* phase 1 graphic here */}
       <div className="flex items-center justify-center space-x-3">
@@ -205,7 +201,10 @@ const About = () => (
       </ul>
     </div>
 
-    {/* TO DO: ARTIST APPLICATION */}
+    {/* web roadmap */}
+    <div className="hidden mx-auto lg:block bg-white pb-10">
+      <Image src={"/images/roadmap.png"} width="1440px" height="830px" layout="responsive" alt="roadmap" />
+    </div>
 
     {/* MOBILE footer / the team */}
     <div className="w-full h-[230px] px-10 bg-metacrateRed lg:hidden">

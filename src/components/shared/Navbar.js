@@ -20,7 +20,7 @@ const NavBar = () => {
   return (
     <>
       {/* web menu */}
-      <div className="flex h-[64px] md:h-[100px] w-full shadow-none items-center bg-metacrateRed">
+      <div className="flex h-[64px] sm:h-[100px] w-full shadow-none items-center bg-metacrateRed">
         {/* mobile menu icon */}
         <div className="flex lg:hidden ml-[20px] z-30">
           <div
@@ -42,11 +42,15 @@ const NavBar = () => {
             </a>
           </Link>
           {/* mobile social icons */}
-          <div>
-            <Image src={discord} height="60px" width="60px" alt="discord" />
+          <div className="hidden sm:block">
+            <a href="discord.gg/dedao">
+              <Image src={discord} height="60px" width="60px" alt="discord" />
+            </a>
           </div>
-          <div>
-            <Image src={twitter} height="60px" width="60px" alt="twitter" />
+          <div className="hidden sm:block">
+            <a href="twitter.com/metacrate">
+              <Image src={twitter} height="60px" width="60px" alt="twitter" />
+            </a>
           </div>
         </div>
         {/* menu div */}

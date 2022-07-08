@@ -7,14 +7,6 @@
     src: url('../../public/fonts/UbuntuCondensed-Regular.ttf') format('opentype');
 }
 
-
-/* Sets top level div background */
-@layer base {
-  body {
-    @apply bg-metacrateWhite;
-  }
-}
-
 * {
   font-family: 'ubuntu', monospace;
   padding: 0;
