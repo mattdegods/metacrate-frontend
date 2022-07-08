@@ -21,6 +21,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'metal': "url('/metal.png')"
+      },
       fontSize: {
         'body-sm': '0.875rem',
         'body-md': '1rem',
