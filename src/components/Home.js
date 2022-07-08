@@ -6,10 +6,10 @@ const Home = () => {
       <div className="text-[40px] md:text-[48px] uppercase">
         Welcome to <span className="text-metacrateRed">MetaCrate.</span>
       </div>
-      <div className="hidden sm:flex justify-center my-4 mx-auto border-8 border-black w-fit" >
+      <div className="hidden sm:flex justify-center my-4 mx-auto border-8 border-black w-fit z-50" >
         <YouTubeEmbed embedId="A91ymdbTZlA" width={600} height={320} />
       </div>
-      <div className="sm:hidden flex justify-center my-4 mx-auto border-8 border-black w-fit">
+      <div className="sm:hidden flex justify-center my-4 mx-auto border-8 border-black w-fit z-50">
         <YouTubeEmbed embedId="A91ymdbTZlA" width={400} height={220} />
       </div>
       <div className="text-[16px] uppercase px-8 pb-10">

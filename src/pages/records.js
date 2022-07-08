@@ -17,31 +17,31 @@ const recordData = [
     title: "The Anthem",
     artist: "Capitol Order",
     image: "/images/vinyl1.svg",
-    mp4: "sample1",
+    mp4: "/videos/test1.mp4",
   },
   {
     title: "Don't Burn Me Out",
     artist: "Capitol Order",
     image: "/images/vinyl2.svg",
-    mp4: "sample2",
+    mp4: "/videos/test2.mp4",
   },
   {
     title: "Anything",
     artist: "Burn Wallstreet",
     image: "/images/vinyl2.svg",
-    mp4: "sample3",
+    mp4: "/videos/test3.mp4",
   },
   {
     title: "Yesterday",
     artist: "Staind",
     image: "/images/vinyl4.svg",
-    mp4: "sample4",
+    mp4: "/videos/test4.mp4",
   },
   {
     title: "Tomorrow",
     artist: "Mayday Parade",
     image: "/images/vinyl5.svg",
-    mp4: "sample5",
+    mp4: "/videos/test5.mp4",
   },
 ];
 
@@ -50,22 +50,22 @@ const crateData = [
     name: "Crate #69",
     image: "/images/my_crate.png"
   },
-  {
-    name: "Crate #420",
-    image: "/images/my_crate.png"
-  },
-  {
-    name: "Crate #420",
-    image: "/images/my_crate.png"
-  },
-  {
-    name: "Crate #420",
-    image: "/images/my_crate.png"
-  },
-  {
-    name: "Crate #420",
-    image: "/images/my_crate.png"
-  }
+  // {
+  //   name: "Crate #420",
+  //   image: "/images/my_crate.png"
+  // },
+  // {
+  //   name: "Crate #420",
+  //   image: "/images/my_crate.png"
+  // },
+  // {
+  //   name: "Crate #420",
+  //   image: "/images/my_crate.png"
+  // },
+  // {
+  //   name: "Crate #420",
+  //   image: "/images/my_crate.png"
+  // }
 ];
 
 const Records = () => {
@@ -147,7 +147,7 @@ const Records = () => {
             </div>
             {/* modal window - music info / player */}
             <div
-              className={`mx-auto fixed inset-0 h-fit w-fit top-1/3 
+              className={`mx-auto fixed inset-0 h-fit w-fit top-[20%] 
                 ${showModal 
                   ? "z-50 opacity-100 transition-opacity ease-in-out"
                   : "-z-10 opacity-0 transition-opacity ease-in-out"
@@ -158,8 +158,8 @@ const Records = () => {
                 image={recordData[activeNFT].image}
                 artist={recordData[activeNFT].artist}
                 title={recordData[activeNFT].title}
+                mp4={recordData[activeNFT].mp4}
                 handleMenu={handleMenu}
-                // mp4={item.mp4}
               />
             </div>
           </div>
