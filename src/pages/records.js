@@ -81,7 +81,7 @@ const Records = () => {
   };
 
   return (
-    <div className="bg-gradient-to-b from-[#ff8e44] via-[#d83e40] to-[#35126a] min-h-screen overflow-x-hidden lg:max-h-screen">
+    <div className="bg-metal bg-cover min-h-screen overflow-x-hidden lg:max-h-screen">
       <NavBar />
       {publicKey ? (
         <div className="mt-12 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
@@ -166,7 +166,7 @@ const Records = () => {
         </div>
       ) : (
         <div className="mt-8 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
-          <div className="max-w-xl flex items-center text-[28px] lg:text-[40px] uppercase text-metacrateWhite mb-8 lg:pb-10 px-4">
+          <div className="bg-gradient-to-r from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text max-w-xl flex items-center text-[28px] lg:text-[40px] uppercase text-transparent mb-8 lg:pb-10 px-4">
             Connect your wallet to experience your collection!
           </div>
           <Image src={shelves} alt="empty shelves" />
