@@ -16,15 +16,15 @@ const Landing = () => (
       </div>
       <div className="h-[250px] md:hidden" />
       {/* mobile crates */}
-      <div className="sm:hidden absolute -bottom-20 -z-10">
+      <div className="sm:hidden absolute -bottom-20 z-10">
         <Image src={crates_mobile} alt="crate background mobile" />
       </div>
       {/* desktop crates */}
-      <div className="hidden sm:block absolute -bottom-6 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-32 4xl:hidden -z-10">
+      <div className="hidden sm:block absolute -bottom-6 lg:-bottom-10 xl:-bottom-20 2xl:-bottom-32 4xl:hidden z-10">
         <Image src={crates_desktop} alt="crate background desktop" />
       </div>
       {/* ultrawide crates */}
-      <div className="hidden absolute -bottom-20 4xl:block -z-10">
+      <div className="hidden absolute -bottom-20 4xl:block z-10">
         <Image src={crates_ultrawide} alt="crate background ultrawide" />
       </div>
     </div>

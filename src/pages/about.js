@@ -15,7 +15,7 @@ const About = () => (
     </div>
 
     {/* mobile header */}
-    <div className="py-8 mt-8 w-full text-center lg:hidden">
+    <div className="pb-8 pt-16 w-full text-center lg:hidden bg-metal">
       <div className="text-[32px] uppercase">Welcome to MetaCrate.</div>
       <div className="my-8 px-10">
         <Image src={cratesplit} alt="crate description" />
@@ -41,8 +41,10 @@ const About = () => (
     </div>
 
     {/* web header */}
-    <div className="pt-8 mt-8 w-full text-center hidden lg:block bg-metal bg-cover">
-      <div className="text-[46px] uppercase">Welcome to <span className="text-metacrateRed">MetaCrate</span>.</div>
+    <div className="pb-8 pt-16 w-full text-center hidden lg:block bg-metal bg-cover">
+      <div className="text-[46px] uppercase">
+        Welcome to <span className="text-metacrateRed">MetaCrate</span>.
+      </div>
       <div className="flex flex-row items-center justify-center px-10">
         <div className="my-8 px-10 max-w-3xl">
           <Image src={cratesplit} alt="crate description" />
@@ -57,19 +59,27 @@ const About = () => (
           release music in the Metaverse. Records will be regularly released to
           the community of crate owners with gamified ownership, listening
           parties, competitions, unique airdrops, artist activations and more.
-          Only crate owners will be able to mint records while everyone else must
-          purchase on the secondary markets.
+          Only crate owners will be able to mint records while everyone else
+          must purchase on the secondary markets.
           <br />
           <br />
           Solana is an alternative blockchain and cryptocurrency solution to the
           negative economic impact Ethereum has had on the environment.
         </div>
       </div>
-      <div className="w-full flex justify-center mt-6 h-[227px]">
-        <div className="w-full text-center my-auto">
-          <p className="uppercase text-metacrateWhite text-[36px] pb-6">Read Our Roadmap</p>
-          <Image src="/images/Arrow_web.svg" width="215px" height="67px" alt="arrow" />
-        </div>
+    </div>
+
+    <div className="w-full flex justify-center pt-6 h-[227px] bg-[url('/images/cratesbg_desk.png')]">
+      <div className="w-full text-center my-auto">
+        <p className="uppercase text-metacrateWhite text-[36px] pb-6">
+          Read Our Roadmap
+        </p>
+        <Image
+          src="/images/Arrow_web.svg"
+          width="215px"
+          height="67px"
+          alt="arrow"
+        />
       </div>
     </div>
 
@@ -203,7 +213,13 @@ const About = () => (
 
     {/* web roadmap */}
     <div className="hidden mx-auto lg:block bg-white pb-10">
-      <Image src={"/images/roadmap.png"} width="1440px" height="830px" layout="responsive" alt="roadmap" />
+      <Image
+        src={"/images/roadmap.png"}
+        width="1440px"
+        height="830px"
+        layout="responsive"
+        alt="roadmap"
+      />
     </div>
 
     {/* MOBILE footer / the team */}

@@ -22,7 +22,7 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'metal': "url('/metal.png')"
+        'metal': "url('/images/metal.png')"
       },
       fontSize: {
         'body-sm': '0.875rem',
