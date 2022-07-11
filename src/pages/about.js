@@ -21,7 +21,7 @@ const About = () => (
         <Image src={cratesplit} alt="crate description" />
       </div>
       <div className="pb-3 text-left text-[14px] sm:text-[20px] px-10 sm:px-20">
-        Every Artist can have a second life; we're here to break Artists from
+        Every Artist can have a second life; we&apos;re here to break Artists from
         the confines of their existing brand and label by offering them a new
         identity in the Metaverse.
         <br />
@@ -50,7 +50,7 @@ const About = () => (
           <Image src={cratesplit} alt="crate description" />
         </div>
         <div className="max-w-3xl h-fit w-1/2 py-6 px-4 mr-8 text-left text-[16px] rounded-lg bg-metacrateRed text-metacrateWhite">
-          Every Artist can have a second life; we're here to break Artists from
+          Every Artist can have a second life; we&apos;re here to break Artists from
           the confines of their existing brand and label by offering them a new
           identity in the Metaverse.
           <br />
@@ -129,7 +129,7 @@ const About = () => (
             <br />
             <span className="text-[#6B6B6B]">
               1,000 Gen 1 crates will be minted at 0.808 SOL / First 1,000 crate
-              owners will be given the '808 Superfan' role
+              owners will be given the &apos;808 Superfan&apos; role
             </span>
           </div>
         </li>
