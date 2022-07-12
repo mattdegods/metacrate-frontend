@@ -48,7 +48,7 @@ const recordData = [
 const crateData = [
   {
     name: "Crate #69",
-    image: "/images/my_crate.png"
+    image: "/images/my_crate.png",
   },
   // {
   //   name: "Crate #420",
@@ -85,26 +85,33 @@ const Records = () => {
       <NavBar />
       {publicKey ? (
         <div className="mt-12 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
-          <div className="lg:w-1/3">
-            <div className="mt-10 py-6 px-10 lg:px-10 lg:mt-0 lg:py-0">
-              <div className="bg-gradient-to-l from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text text-[32px] uppercase text-transparent pb-8">
+          <div className="lg:w-1/2 mx-[10%] max-w-xl border border-red-500">
+            <div className="mt-10 pt-6 px-10 lg:px-10 lg:mt-0 lg:py-0">
+              <div className="bg-gradient-to-l from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text text-[32px] md:text-[48px] uppercase text-transparent pb-8">
                 Crate Collection
               </div>
               <div className="w-full">
-                <div className="flex flex-row flex-wrap justify-between">
+                <div
+                  className={`flex flex-row flex-wrap ${
+                    crateData.length === 1
+                      ? "flex justify-center"
+                      : "flex justify-between"
+                  }`}
+                >
                   {crateData.map((item, index) => (
                     <div className="relative" key={index}>
                       <div
-                        className={`px-3 mb-6 sm:hover:-translate-y-3 transition-transform ease-in-out duration-500
-                        ${crateData.length === 1 && 'w-full'}
-                        ${(crateData.length > 1 && crateData.length <= 4) && 'w-[200px]'}
-                        ${(crateData.length > 4) && 'w-[140px]'}
+                        className={`px-8 mb-6 sm:hover:-translate-y-3 transition-transform ease-in-out duration-500
+                        ${crateData.length === 1 && "w-[400px]"}
+                        ${
+                          crateData.length > 1 &&
+                          crateData.length <= 4 &&
+                          "w-[200px]"
+                        }
+                        ${crateData.length > 4 && "w-[140px]"}
                         `}
                       >
-                        <img
-                          src={item.image}
-                          alt="NFT album art"
-                        />
+                        <img src={item.image} alt="NFT album art" />
                       </div>
                     </div>
                   ))}
@@ -113,31 +120,30 @@ const Records = () => {
             </div>
           </div>
           {/* my records */}
-          <div>
-            <div className="bg-gradient-to-r from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text text-[32px] uppercase text-transparent mt-6 py-6 lg:mt-0 lg:py-0 lg:pb-8">
-              Record Collection
-            </div>
-            <div className="w-[60%] mx-auto text-center">
+          <div className="mx-[10%] max-w-2xl border border-red-500">
+            <div className="mt-10 pt-6 px-10 lg:px-10 lg:mt-0 lg:py-0">
+              <div className="bg-gradient-to-r from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text text-[32px] md:text-[48px] uppercase text-transparent mt-6 py-6 lg:mt-0 lg:py-0 lg:pb-8">
+                Record Collection
+              </div>
               <div className="flex flex-row flex-wrap justify-between">
                 {recordData.map((item, index) => (
                   <div className="relative" key={index}>
                     <div
-                      className="px-3 mb-6 sm:hover:cursor-pointer sm:hover:-translate-y-3 transition-transform ease-in-out duration-500"
+                      className="w-[110px] md:w-[150px] lg:[200px] mx-4 mb-6 sm:hover:cursor-pointer sm:hover:-translate-y-3 transition-transform ease-in-out duration-500"
                       onClick={() => {
                         setActiveNFT(index);
                         setShowModal(!showModal);
                       }}
                     >
-                      <Image
+                      <img
                         src={item.image}
-                        width="110px"
-                        height="110px"
+                        style={{ width: "100%" }}
                         alt="NFT album art"
                       />
                     </div>
                     {/* render a shelf every odd index */}
                     {/* {index % 2 === 1 && ( */}
-                    <div className="absolute bottom-4">
+                    <div className="absolute bottom-1">
                       <Image src={single_shelf} alt="shelf" />
                     </div>
                     {/* )} */}
@@ -148,9 +154,10 @@ const Records = () => {
             {/* modal window - music info / player */}
             <div
               className={`mx-auto fixed inset-0 h-fit w-fit top-[20%] 
-                ${showModal 
-                  ? "z-50 opacity-100 transition-opacity ease-in-out"
-                  : "-z-10 opacity-0 transition-opacity ease-in-out"
+                ${
+                  showModal
+                    ? "z-50 opacity-100 transition-opacity ease-in-out"
+                    : "-z-10 opacity-0 transition-opacity ease-in-out"
                 }
               `}
             >
