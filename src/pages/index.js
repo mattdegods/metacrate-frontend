@@ -7,15 +7,16 @@ import crates_ultrawide from "../components/shared/assets/crates_ultrawide.png";
 
 const Landing = () => (
   <div className="relative h-screen bg-metal bg-cover bg-top overflow-hidden">
-    <div className="flex flex-col md:flex-none h-full justify-start">
-      <div className="mb-auto">
+    <div className="h-full flex flex-col justify-between">
+      <div>
         <NavBar />
       </div>
-      <div className="h-[500px] md:h-auto md:mb-auto">
+      <div className="h-[480px] md:h-auto flex items-center">
         <Home />
       </div>
+      <div className="h-[20%]" />
     </div>
-    <div className="h-[250px] md:hidden" />
+
     {/* mobile crates */}
     <div className="sm:hidden absolute -bottom-20 z-0">
       <Image src={crates_mobile} alt="crate background mobile" />
