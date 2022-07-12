@@ -121,7 +121,7 @@ const NavBar = () => {
                 (coming soon)
               </div>
             </div>
-            <div className="mx-auto pb-8 text-metacrateWhite">
+            <div className="mx-auto py-8 text-metacrateWhite">
               <Link href="/">
                 <a>metacrate.com</a>
               </Link>
