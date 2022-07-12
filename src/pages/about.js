@@ -15,7 +15,7 @@ const About = () => (
     </div>
 
     {/* mobile header */}
-    <div className="pb-8 pt-16 w-full text-center lg:hidden bg-metal">
+    <div className="pb-8 pt-16 w-full text-center lg:hidden bg-metal bg-cover">
       <div className="text-[32px] uppercase">Welcome to MetaCrate.</div>
       <div className="my-8 px-10">
         <Image src={cratesplit} alt="crate description" />
