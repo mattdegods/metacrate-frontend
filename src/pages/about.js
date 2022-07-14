@@ -37,7 +37,7 @@ const About = () => (
         Solana is an alternative blockchain and cryptocurrency solution to the
         negative economic impact Ethereum has had on the environment.
       </div>
-      <div className="w-full flex justify-center mt-6">{Arrow}</div>
+      {/* <div className="w-full flex justify-center mt-6">{Arrow}</div> */}
     </div>
 
     {/* web header */}
@@ -72,7 +72,7 @@ const About = () => (
     <div className="w-full flex justify-center pt-6 h-[227px] bg-[url('/images/cratesbg_desk.png')]">
       <div className="w-full text-center my-auto">
         <p className="uppercase text-metacrateWhite text-[36px] pb-6">
-          Read Our Roadmap
+          Roadmap
         </p>
         <Image
           src="/images/Arrow_web.svg"
@@ -85,7 +85,6 @@ const About = () => (
 
     {/* mobile roadmap */}
     <div className="px-16 sm:px-4 sm:w-1/2 my-10 mx-auto lg:hidden">
-      <div className="text-[32px] text-center uppercase pb-6">The Roadmap</div>
       {/* phase 1 graphic here */}
       <div className="flex items-center justify-center space-x-3">
         <div className="h-full">{RedPolygon}</div>
@@ -96,7 +95,7 @@ const About = () => (
       </div>
       <ul className="pt-6 pb-12">
         {/* dashed line */}
-        <div className="absolute h-[490px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[46px] translate-y-6 sm:hidden" />
+        <div className="absolute h-[490px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[49px] translate-y-6 sm:hidden" />
 
         <li>
           <div className="pl-3 -translate-y-2">
@@ -160,7 +159,7 @@ const About = () => (
       </div>
       <ul className="pt-6 pb-12">
         {/* dashed line */}
-        <div className="absolute h-[360px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[46px] translate-y-6 sm:hidden" />
+        <div className="absolute h-[360px] border-dashed border-l-2 border-l-metacrateBlack/70 left-[49px] translate-y-6 sm:hidden" />
         <li>
           <div className="pl-3 -translate-y-2">
             More Record Releases

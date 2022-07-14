@@ -41,7 +41,7 @@ const NavBar = () => {
               />
             </a>
           </Link>
-          {/* mobile social icons */}
+          {/* social icons */}
           <div className="hidden sm:block">
             <a href="discord.gg/dedao">
               <Image src={discord} height="60px" width="60px" alt="discord" />
@@ -119,6 +119,29 @@ const NavBar = () => {
               <div className="text-metacrateWhite/40 mt-6">record store</div>
               <div className="lowercase text-metacrateWhite/40 text-body-md">
                 (coming soon)
+              </div>
+              {/* mobile social icons */}
+              <div className="flex flex-row justify-center pt-4 space-x-3">
+                <div className="">
+                  <a href="discord.gg/dedao">
+                    <Image
+                      src={discord}
+                      height="80px"
+                      width="80px"
+                      alt="discord"
+                    />
+                  </a>
+                </div>
+                <div className="">
+                  <a href="twitter.com/metacrate">
+                    <Image
+                      src={twitter}
+                      height="80px"
+                      width="80px"
+                      alt="twitter"
+                    />
+                  </a>
+                </div>
               </div>
             </div>
             <div className="mx-auto py-8 text-metacrateWhite">
