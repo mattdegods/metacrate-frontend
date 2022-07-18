@@ -24,7 +24,7 @@ const NFTModal = ({ image, artist, title, mp4, handleMenu }) => {
           height="100%"
           controls={true}
           loop={false}
-          playing={true}
+          playing={false}
         />
       </div>
       <p className="font-extrabold pt-8">{artist}</p>
