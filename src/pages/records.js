@@ -19,30 +19,35 @@ const recordData = [
     artist: "Capitol Order",
     image: "/images/vinyl1.svg",
     mp4: "/videos/test1.mp4",
+    rarity: "Common"
   },
   {
     title: "Don't Burn Me Out",
     artist: "Capitol Order",
     image: "/images/vinyl2.svg",
     mp4: "/videos/test2.mp4",
+    rarity: "Common"
   },
   {
     title: "Anything",
     artist: "Burn Wallstreet",
     image: "/images/vinyl2.svg",
     mp4: "/videos/test3.mp4",
+    rarity: "Uncommon"
   },
   {
     title: "Yesterday",
     artist: "Staind",
     image: "/images/vinyl4.svg",
     mp4: "/videos/test4.mp4",
+    rarity: "Rare"
   },
   {
     title: "Tomorrow",
     artist: "Mayday Parade",
     image: "/images/vinyl5.svg",
     mp4: "/videos/test5.mp4",
+    rarity: "Mythic"
   },
 ];
 
@@ -163,6 +168,7 @@ const Records = () => {
                 artist={recordData[activeNFT].artist}
                 title={recordData[activeNFT].title}
                 mp4={recordData[activeNFT].mp4}
+                rarity={recordData[activeNFT].rarity}
                 handleMenu={handleMenu}
               />
             </div>

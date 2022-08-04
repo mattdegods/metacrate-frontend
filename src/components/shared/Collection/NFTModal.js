@@ -2,10 +2,10 @@ import Image from "next/image";
 import Close from "../Close";
 import ReactPlayer from "react-player";
 
-const NFTModal = ({ image, artist, title, mp4, handleMenu }) => {
+const NFTModal = ({ image, artist, title, rarity, mp4, handleMenu }) => {
 
   return (
-    <div className="rounded-xl bg-metacrateRed text-metacrateWhite px-20 py-8 max-w-lg max-h-lg shadow-xl shadow-black/60">
+    <div className="rounded-xl bg-metacrateRed text-metacrateWhite px-20 py-8 max-w-xl max-h-xl shadow-xl shadow-black/60">
       <div
         className="absolute top-8 right-8 hover:cursor-pointer"
         onClick={() => {
@@ -14,7 +14,8 @@ const NFTModal = ({ image, artist, title, mp4, handleMenu }) => {
       >
         <Close color="white" />
       </div>
-      <p className="pb-8 text-2xl">{title}</p>
+      <p className="text-xl pt-8">Artist Name:{" "}{artist}</p>
+      <p className="pb-8 text-lg">Song Title:{" "}{title}</p>
       {/* <Image src={image} width="179px" height="179px" alt="music NFT image" /> */}
       <div className="player-wrapper">
         <ReactPlayer
@@ -27,7 +28,7 @@ const NFTModal = ({ image, artist, title, mp4, handleMenu }) => {
           playing={false}
         />
       </div>
-      <p className="font-extrabold pt-8">{artist}</p>
+      <p className="pt-8">Rarity:{" "}{rarity}</p>
     </div>
   );
 };

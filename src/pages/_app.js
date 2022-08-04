@@ -94,6 +94,8 @@ const App = ({ Component, pageProps }) => {
           property="twitter:image"
           content={`https://duppies.com/images/metaImagev2.jpg?v=1`}
         />
+
+      <script src="https://player.vimeo.com/api/player.js%22%3E" />
       </Head>
       <ConnectionProvider endpoint={endpoint} config={connectionConfig}>
         <WalletProvider wallets={wallets} autoConnect>
