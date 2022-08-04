@@ -18,9 +18,9 @@ const Home = () => {
       <div className="relative my-8 z-40 h-[300px] w-fit sm:w-[500px] mx-auto">
         <iframe
           src="https://player.vimeo.com/video/666803743?h=abe773636c&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
-          frameborder="0"
+          frameBorder="0"
           allow="autoplay; fullscreen; picture-in-picture"
-          allowfullscreen
+          allowFullScreen
           className="w-full h-full"
           title="Meta Crate Trailer"
         ></iframe>
