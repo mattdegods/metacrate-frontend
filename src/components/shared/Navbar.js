@@ -24,30 +24,32 @@ const NavBar = () => {
         {/* mobile menu icon */}
         <div className="flex lg:hidden ml-[20px] z-30">
           <div
-            className="cursor-pointer p-2 ml-1 md:ml-4 min-w-[38px]"
+            className="cursor-pointer p-2 ml-1 md:ml-4 min-w-[38px] hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300"
             onClick={() => setOpen(!open)}
           >
             {MenuClosed}
           </div>
         </div>
         <div className="pt-2 ml-4 flex flex-row items-center">
-          <Link href="/">
-            <a>
-              <Image
-                src={logo}
-                width="48px"
-                height="48px"
-                alt="metacrate logo"
-              />
-            </a>
-          </Link>
+          <div className="hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300">
+            <Link href="/">
+              <a>
+                <Image
+                  src={logo}
+                  width="48px"
+                  height="48px"
+                  alt="metacrate logo"
+                />
+              </a>
+            </Link>
+          </div>
           {/* social icons */}
-          <div className="hidden sm:block">
+          <div className="hidden sm:block hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300">
             <a href="discord.gg/dedao">
               <Image src={discord} height="60px" width="60px" alt="discord" />
             </a>
           </div>
-          <div className="hidden sm:block">
+          <div className="hidden sm:block hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300">
             <a href="twitter.com/metacrate">
               <Image src={twitter} height="60px" width="60px" alt="twitter" />
             </a>
@@ -55,12 +57,12 @@ const NavBar = () => {
         </div>
         {/* menu div */}
         <div className="text-white flex items-center space-x-10 ml-auto mr-6 sm:mr-10 z-10">
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300">
             <Link href="/about">
               <a>ABOUT US</a>
             </Link>
           </div>
-          <div className="hidden lg:flex">
+          <div className="hidden lg:flex hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300">
             <Link href="/records">
               <a>MY COLLECTION</a>
             </Link>
@@ -71,7 +73,7 @@ const NavBar = () => {
             {/* </Link> */}
           </div>
 
-          <div className="bg-[#B82628] rounded-lg w-fit z-40">
+          <div className="bg-[#B82628] rounded-lg w-fit z-40 hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300">
             <WalletMultiButton className="wallet-adapter-button" />
           </div>
         </div>

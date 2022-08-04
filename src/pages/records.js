@@ -11,6 +11,7 @@ import myCrate from "../components/shared/assets/my_crate.png";
 
 //solana wallet
 import { useConnection, useWallet } from "@solana/wallet-adapter-react";
+import { WalletMultiButton } from "@solana/wallet-adapter-react-ui";
 
 const recordData = [
   {
@@ -168,11 +169,16 @@ const Records = () => {
           </div>
         </div>
       ) : (
-        <div className="mt-8 w-full text-center lg:flex lg:flex-row-reverse lg:justify-evenly lg:align-top lg:px-10">
-          <div className="bg-gradient-to-r from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text max-w-xl flex items-center text-[28px] lg:text-[40px] uppercase text-transparent mb-8 lg:pb-10 px-4">
-            Connect your wallet to experience your collection!
+        <div className="mt-8 text-center w-fit mx-auto lg:flex lg:flex-row-reverse lg:align-top lg:px-10">
+          <div className="max-w-xl text-[28px] lg:text-[40px] uppercase text-transparent lg:pb-10 lg:ml-8 px-4 h-fit my-auto">
+            <p className="bg-gradient-to-r from-[#ff8e44] via-[#d83e40] to-[#35126a] bg-clip-text">Connect your wallet to experience your collection!</p> 
+            <div className="bg-[#B82628] my-8 rounded-lg w-fit mx-auto z-40 hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300">
+              <WalletMultiButton className="wallet-adapter-button" />
+            </div>
           </div>
-          <Image src={shelves} alt="empty shelves" />
+          <div className="text-center lg:mr-8 max-w-xl">
+            <Image src={shelves} alt="empty shelves" />
+          </div>
         </div>
       )}
     </div>

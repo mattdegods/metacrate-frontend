@@ -16,43 +16,41 @@ const About = () => (
 
     {/* mobile header */}
     <div className="pb-8 pt-16 w-full text-center lg:hidden bg-metal bg-cover">
-      <div className="text-[32px] uppercase">Welcome to MetaCrate.</div>
+      <div className="text-[36px] uppercase">
+        Welcome to <span className="text-metacrateRed">MetaCrate</span>.
+      </div>
       <div className="my-8 px-10">
         <Image src={cratesplit} alt="crate description" />
       </div>
-      <div className="pb-3 text-left text-[14px] sm:text-[20px] px-10 sm:px-20">
-        Every Artist can have a second life; we&apos;re here to break Artists from
-        the confines of their existing brand and label by offering them a new
-        identity in the Metaverse.
+      <div className="pb-3 text-left text-[18px] sm:text-[20px] px-10 sm:px-20">
+        Every Artist can have a second life; we&apos;re here to break Artists
+        from the confines of their existing brand and label by offering them a
+        new identity in the Metaverse.
         <br />
         <br />
-        Meta Crate is the first music NFT platform for recording artists to
+        MetaCrate is the first music NFT platform for recording artists to
         release music in the Metaverse. Records will be regularly released to
         the community of crate owners with gamified ownership, listening
         parties, competitions, unique airdrops, artist activations and more.
         Only crate owners will be able to mint records while everyone else must
         purchase on the secondary markets.
-        <br />
-        <br />
-        Solana is an alternative blockchain and cryptocurrency solution to the
-        negative economic impact Ethereum has had on the environment.
       </div>
       {/* <div className="w-full flex justify-center mt-6">{Arrow}</div> */}
     </div>
 
     {/* web header */}
     <div className="pb-8 pt-16 w-full text-center hidden lg:block bg-metal bg-cover">
-      <div className="text-[46px] uppercase">
+      <div className="text-[55px] uppercase">
         Welcome to <span className="text-metacrateRed">MetaCrate</span>.
       </div>
       <div className="flex flex-row items-center justify-center px-10">
         <div className="my-8 px-10 max-w-3xl">
           <Image src={cratesplit} alt="crate description" />
         </div>
-        <div className="max-w-3xl h-fit w-1/2 py-6 px-4 mr-8 text-left text-[16px] rounded-lg bg-metacrateRed text-metacrateWhite">
-          Every Artist can have a second life; we&apos;re here to break Artists from
-          the confines of their existing brand and label by offering them a new
-          identity in the Metaverse.
+        <div className="max-w-[600px] h-fit w-1/2 py-6 px-4 mr-8 text-left text-[18px] rounded-lg bg-metacrateRed text-metacrateWhite">
+          Every Artist can have a second life; we&apos;re here to break Artists
+          from the confines of their existing brand and label by offering them a
+          new identity in the Metaverse.
           <br />
           <br />
           Meta Crate is the first music NFT platform for recording artists to
@@ -61,17 +59,13 @@ const About = () => (
           parties, competitions, unique airdrops, artist activations and more.
           Only crate owners will be able to mint records while everyone else
           must purchase on the secondary markets.
-          <br />
-          <br />
-          Solana is an alternative blockchain and cryptocurrency solution to the
-          negative economic impact Ethereum has had on the environment.
         </div>
       </div>
     </div>
 
-    <div className="w-full flex justify-center pt-6 h-[227px] bg-[url('/images/cratesbg_desk.png')]">
+    <div className="w-full flex justify-center py-6 h-[227px] bg-[url('/images/cratesbg_desk.png')]">
       <div className="w-full text-center my-auto">
-        <p className="uppercase text-metacrateWhite text-[36px] pb-6">
+        <p className="uppercase text-metacrateWhite text-[42px] pb-6">
           Roadmap
         </p>
         <Image
@@ -244,9 +238,30 @@ const About = () => (
         </div>
         {/* three logos */}
         <div className="flex justify-evenly w-1/2 mx-auto">
-          <Image src={web3devs} alt="web3 devs logo" />
-          <Image src={thirdbrain} alt="thirdbrain logo" />
-          <Image src={uc} alt="uc logo" />
+          <a
+            href="https://www.abhithenomad.com"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300"
+          >
+            <Image src={web3devs} alt="abhi logo" />
+          </a>
+          <a
+            href="https://th3rdbrain.com/"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300"
+          >
+            <Image src={thirdbrain} alt="thirdbrain logo" />
+          </a>
+          <a
+            href="https://www.undercurrent.net"
+            target="_blank"
+            rel="noreferrer"
+            className="hover:scale-105 hover:-translate-y-2 transition-transform ease-in-out duration-300"
+          >
+            <Image src={uc} alt="undercurrent logo" />
+          </a>
         </div>
       </div>
     </div>
